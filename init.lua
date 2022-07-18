@@ -14,4 +14,6 @@ require 'plugins/nvim-terminal'
 require 'plugins/feline'
 require 'plugins/gitsigns'
 require 'plugins/telescope'
+require 'plugins/nvim-comment'
+require 'plugins/vim-visual-multi'
 

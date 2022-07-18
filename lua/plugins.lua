@@ -40,4 +40,10 @@ require 'paq' {
 
     -- Terminal
     's1n7ax/nvim-terminal';
+
+    -- Comment
+    'terrortylor/nvim-comment';
+
+    -- Multiselect
+    'mg979/vim-visual-multi';
 }
