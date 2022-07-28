@@ -26,9 +26,6 @@ require 'paq' {
     -- Autopair
     'windwp/nvim-autopairs';
 
-    -- Status Line
-    'feline-nvim/feline.nvim';
-
     -- Git Signs
     'lewis6991/gitsigns.nvim';
 
@@ -49,4 +46,7 @@ require 'paq' {
 
     -- Goto Preview
     'rmagatti/goto-preview';
+
+    -- Lualine
+    'nvim-lualine/lualine.nvim';
 }
