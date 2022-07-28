@@ -46,4 +46,7 @@ require 'paq' {
 
     -- Multiselect
     'mg979/vim-visual-multi';
+
+    -- Goto Preview
+    'rmagatti/goto-preview';
 }

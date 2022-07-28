@@ -16,4 +16,6 @@ require 'plugins/gitsigns'
 require 'plugins/telescope'
 require 'plugins/nvim-comment'
 require 'plugins/vim-visual-multi'
+require 'plugins/nvim-lspconfig'
+require 'plugins/goto-preview'
 
