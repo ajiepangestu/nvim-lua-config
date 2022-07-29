@@ -2,6 +2,9 @@ local status, plugin = pcall(require, 'nvim-terminal')
 if not status then
   return
 end
+
+vim.o.hidden = true
+
 plugin.setup {
     window = {
         position = 'botright',
@@ -38,5 +41,4 @@ plugin.setup {
         }
     }
 }
-vim.o.hidden = true
 
