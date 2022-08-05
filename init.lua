@@ -18,4 +18,5 @@ require 'plugins/vim-visual-multi'
 require 'plugins/nvim-lspconfig'
 require 'plugins/goto-preview'
 require 'plugins/lualine'
+require 'plugins/tabline'
 

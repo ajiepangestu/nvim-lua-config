@@ -54,3 +54,8 @@ map('n', '<C-n>', ':NvimTreeToggle<CR>')
 map('n', '<leader>f', ':Telescope find_files<CR>')
 map('n', '<leader>fg', ':Telescope live_grep<CR>')
 
+-- Bufferline
+map('n', '<leader>b', ':BufferlineToggle<CR>')
+map('n', '<leader>p', ':bprevious<CR>')
+map('n', '<leader>n', ':bnext<CR>')
+

@@ -49,4 +49,8 @@ require 'paq' {
 
     -- Lualine
     'nvim-lualine/lualine.nvim';
+    
+    -- Tabline
+    'kdheepak/tabline.nvim';
+    
 }
