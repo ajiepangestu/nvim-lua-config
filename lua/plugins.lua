@@ -52,5 +52,8 @@ require 'paq' {
     
     -- Tabline
     'kdheepak/tabline.nvim';
+
+    -- Editor Config
+    'gpanders/editorconfig.nvim';
     
 }

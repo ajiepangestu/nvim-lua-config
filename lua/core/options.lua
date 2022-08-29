@@ -20,7 +20,6 @@ opt.completeopt = 'menuone,noinsert,noselect'
 
 -- NeoVIM Theme
 g.monokaipro_filter = "spectrum"
-g.monokaipro_italic_functions = true
 cmd[[colorscheme monokaipro]]
 
 -- NeoVIM UI

@@ -19,4 +19,5 @@ require 'plugins/nvim-lspconfig'
 require 'plugins/goto-preview'
 require 'plugins/lualine'
 require 'plugins/tabline'
+require 'plugins/editorconfig'
 
