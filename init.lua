@@ -1,23 +1,20 @@
--- Configurations
-require 'core/options'
-require 'core/keymaps'
+-- General
+require('configs/keymap')
+require('configs/option')
 
 -- Plugins
-require 'plugins'
-require 'plugins/nvim-tree'
-require 'plugins/nvim-web-devicons'
-require 'plugins/better-escape'
-require 'plugins/indent-blankline'
-require 'plugins/nvim-treesitter'
-require 'plugins/nvim-autopairs'
-require 'plugins/nvim-terminal'
-require 'plugins/gitsigns'
-require 'plugins/telescope'
-require 'plugins/nvim-comment'
-require 'plugins/vim-visual-multi'
-require 'plugins/nvim-lspconfig'
-require 'plugins/goto-preview'
-require 'plugins/lualine'
-require 'plugins/tabline'
-require 'plugins/editorconfig'
+require('plugin_manager')
+require('plugin_configs/onedark')
+require('plugin_configs/lualine')
+require('plugin_configs/gitsigns')
+require('plugin_configs/indent-blankline')
+require('plugin_configs/nvim-autopairs')
+require('plugin_configs/nvim-cmp')
+require('plugin_configs/nvim-colorizer')
+require('plugin_configs/nvim-comment')
+require('plugin_configs/nvim-lspconfig')
+require('plugin_configs/nvim-tree')
+require('plugin_configs/nvim-treesitter')
+require('plugin_configs/telescope')
+require('plugin_configs/vim-multi-cursor')
 
