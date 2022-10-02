@@ -16,5 +16,6 @@ require('plugin_configs/nvim-lspconfig')
 require('plugin_configs/nvim-tree')
 require('plugin_configs/nvim-treesitter')
 require('plugin_configs/telescope')
+require('plugin_configs/toggleterm')
 require('plugin_configs/vim-multi-cursor')
 
