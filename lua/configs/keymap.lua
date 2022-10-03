@@ -18,35 +18,24 @@ map('', '<right>', '<nop>')
 -- Map Esc to jj
 map('i', 'jj', '<Esc>')
 
--- Clear search highlighting with <leader> and c
+-- Clear search highlighting
 map('n', '<leader>c', ':nohl<CR>')
 
--- Toggle auto-indenting for code paste
-map('n', '<F2>', ':set invpaste paste?<CR>')
-vim.opt.pastetoggle = '<F2>'
+-- Splig horizontal
+map('n', '<leader>[', '<C-w>v')
+map('n', '<leader>]', '<C-w>h')
 
--- Change split orientation
-map('n', '<leader>tk', '<C-w>t<C-w>K') -- change vertical to horizontal
-map('n', '<leader>th', '<C-w>t<C-w>H') -- change horizontal to vertical
-
--- Move around splits using Ctrl + {h,j,k,l}
+-- Move focus
 map('n', '<leader>h', '<C-w>h')
 map('n', '<leader>j', '<C-w>j')
 map('n', '<leader>k', '<C-w>k')
 map('n', '<leader>l', '<C-w>l')
 
--- Reload configuration without restart nvim
-map('n', '<leader>r', ':so %<CR>')
-
--- Fast saving with <leader> and s
+-- Save
 map('n', '<leader>w', ':w<CR>')
 map('i', '<leader>w', '<C-c>:w<CR>')
 
--- Close all windows and exit from Neovim with <leader> and q
+-- Close Window
 map('n', '<leader>q', ':qa!<CR>')
 map('n', '<leader>d', ':q<CR>')
-
--- Terminal
-map('n', '<C-t>', ':Term<CR>', { noremap = true })
-map('t', '<Esc>', '<C-\\><C-n>')
 

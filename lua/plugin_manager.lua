@@ -75,9 +75,6 @@ return require('packer').startup(function(use)
     -- Git Commit Label
     use 'lewis6991/gitsigns.nvim'
 
-    -- Git Diff
-    use 'sindrets/diffview.nvim'
-
     -- Terminal Toggle
     use { 'akinsho/toggleterm.nvim', tag = '*' }
 
