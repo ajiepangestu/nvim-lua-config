@@ -6,16 +6,13 @@ end
 
 toggleterm.setup {
     direction = 'float',
-    float_opts = {
-        border = 'curved'
-    }
     shade_terminals = false
 }
 
 -- Keymap
 local opts = {}
 vim.api.nvim_set_keymap('n', '<leader>t', ':ToggleTerm<CR>', opts)
-vim.api.nvim_set_keymap('t', '<leader>c', [[<C-\><C-n>]], opts)
+vim.api.nvim_set_keymap('t', '<leader>jj', [[<C-\><C-n>]], opts)
 vim.api.nvim_set_keymap('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
 vim.api.nvim_set_keymap('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
 vim.api.nvim_set_keymap('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
