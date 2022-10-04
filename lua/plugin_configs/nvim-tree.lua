@@ -4,7 +4,20 @@ if not status_ok then
     return
 end
 
-nvim_tree.setup {}
-
-vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', {})
+nvim_tree.setup {
+    filters = {
+        dotfiles = false,
+        custom = { '^.git$' }
+	},
+    update_focused_file = {
+        enable = true,
+        update_cwd = true,
+    },
+    renderer = {
+        indent_markers = {
+            enable = true,
+            inline_arrows = false,
+        },
+    }
+}
 

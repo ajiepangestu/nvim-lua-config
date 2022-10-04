@@ -4,6 +4,7 @@ require('configs/option')
 
 -- Plugins
 require('plugin_manager')
+require('plugin_configs/bufferline')
 require('plugin_configs/onedark')
 require('plugin_configs/lualine')
 require('plugin_configs/gitsigns')

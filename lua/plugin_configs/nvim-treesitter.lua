@@ -6,6 +6,7 @@ end
 
 nvim_treesitter.setup {
     ensure_installed = "all",
+    sync_install = true,
     highlight = {
         enable = true,
     },

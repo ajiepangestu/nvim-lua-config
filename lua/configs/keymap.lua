@@ -6,6 +6,10 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+------------------------------------
+-- Neovim
+------------------------------------
+
 -- Change leader to a space
 vim.g.mapleader = ' '
 
@@ -38,4 +42,30 @@ map('i', '<leader>w', '<C-c>:w<CR>')
 -- Close Window
 map('n', '<leader>q', ':qa!<CR>')
 map('n', '<leader>d', ':q<CR>')
+
+------------------------------------
+-- Plugin Configurations
+------------------------------------
+
+-- Nvim Tree
+map('n', '<C-e>', ':NvimTreeToggle<CR>')
+
+-- Bufferline
+map('n', '<leader>p', ':bprevious<CR>')
+map('n', '<leader>n', ':bnext<CR>')
+
+-- File Finder
+map('n', 'ff', ':Telescope find_files<CR>')
+map('n', 'fg', ':Telescope live_grep<CR>')
+map('n', 'fb', ':Telescope file_browser<CR>')
+
+-- Terminal
+map('n', '<leader>t', ':ToggleTerm<CR>')
+map('t', '<leader>t', [[<C-\><C-n>]])
+
+-- Terminal Window
+map('t', '<leader>j', [[<Cmd>wincmd j<CR>]])
+map('t', '<leader>k', [[<Cmd>wincmd k<CR>]])
+map('t', '<leader>l', [[<Cmd>wincmd l<CR>]])
+map('t', '<leader>h', [[<Cmd>wincmd h<CR>]])
 

@@ -45,6 +45,9 @@ return require('packer').startup(function(use)
     -- Statusline
     use 'nvim-lualine/lualine.nvim'
 
+    -- Bufferline
+    use {'akinsho/bufferline.nvim', tag = 'v2.*'}
+
     -- Plenary
     use 'nvim-lua/plenary.nvim'
 
