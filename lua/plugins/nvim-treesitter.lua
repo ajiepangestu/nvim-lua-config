@@ -5,7 +5,20 @@ if not status_ok then
 end
 
 nvim_treesitter.setup {
-    ensure_installed = "all",
+    ensure_installed = {
+        'bash',
+        'make',
+        'html',
+        'javascript',
+        'css',
+        'lua',
+        'yaml',
+        'jsonc',
+        'markdown',
+        'python',
+        'typescript',
+        'php'
+    },
     sync_install = true,
     highlight = {
         enable = true,
