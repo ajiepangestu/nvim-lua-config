@@ -5,10 +5,11 @@ if not status_ok then
 end
 
 nvim_tree.setup {
+    auto_reload_on_write = true,
     filters = {
         dotfiles = false,
         custom = { '^.git$' }
-	},
+    },
     update_focused_file = {
         enable = true,
         update_cwd = true,
@@ -20,4 +21,3 @@ nvim_tree.setup {
         },
     }
 }
-

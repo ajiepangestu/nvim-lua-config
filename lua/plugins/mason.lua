@@ -10,9 +10,9 @@ if not status_ok then
     return
 end
 
-mason.setup{}
+mason.setup {}
 
-mason_lspconfig.setup{
+mason_lspconfig.setup {
     ensure_installed = {
         'bashls',
         'html',
@@ -27,5 +27,3 @@ mason_lspconfig.setup{
         'intelephense',
     }
 }
-
-

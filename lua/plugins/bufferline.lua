@@ -5,7 +5,7 @@ if not status_ok then
 end
 
 bufferline.setup {
-    options =  {
+    options = {
         separator_style = 'slant',
         offsets = {
             {
@@ -17,4 +17,3 @@ bufferline.setup {
         }
     }
 }
-

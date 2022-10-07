@@ -1,15 +1,13 @@
 local function map(mode, lhs, rhs, opts)
-  local options = { noremap = true, silent = true }
-  if opts then
-    options = vim.tbl_extend('force', options, opts)
-  end
-  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+    local options = { noremap = true, silent = true }
+    if opts then
+        options = vim.tbl_extend('force', options, opts)
+    end
+    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
-------------------------------------
 -- Neovim
-------------------------------------
-
+-------------------------------------------------------------------
 -- Change leader to semicolon
 vim.g.mapleader = ';'
 
@@ -42,11 +40,11 @@ map('i', '<leader>w', '<C-c>:w<CR>')
 -- Close Window
 map('n', '<leader>q', ':qa!<CR>')
 map('n', '<leader>d', ':q<CR>')
+-------------------------------------------------------------------
 
-------------------------------------
+
 -- Plugin Configurations
-------------------------------------
-
+-------------------------------------------------------------------
 -- Nvim Tree
 map('n', '<C-e>', ':NvimTreeToggle<CR>')
 
@@ -68,4 +66,4 @@ map('t', '<leader>j', [[<Cmd>wincmd j<CR>]])
 map('t', '<leader>k', [[<Cmd>wincmd k<CR>]])
 map('t', '<leader>l', [[<Cmd>wincmd l<CR>]])
 map('t', '<leader>h', [[<Cmd>wincmd h<CR>]])
-
+-------------------------------------------------------------------

@@ -1,5 +1,5 @@
 -- Auto Pair Bracket
-local status_ok, nvim_autopairs = pcall(require, 'nvim_autopairs')
+local status_ok, nvim_autopairs = pcall(require, 'nvim-autopairs')
 if not status_ok then
     return
 end
@@ -9,4 +9,3 @@ nvim_autopairs.setup {
         "TelescopePrompt"
     },
 }
-

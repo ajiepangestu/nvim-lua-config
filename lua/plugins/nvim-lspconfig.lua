@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 -- Mappings.
-local opts = { noremap=true, silent=true }
+local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
@@ -17,7 +17,7 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
     -- Mappings.
-    local bufopts = { noremap=true, silent=true, buffer=bufnr }
+    local bufopts = { noremap = true, silent = true, buffer = bufnr }
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
@@ -45,7 +45,6 @@ local language_servers = {
     'bashls',
     'html',
     'cssls',
-    'sumneko_lua',
     'yamlls',
     'jsonls',
     'marksman',
@@ -56,9 +55,18 @@ local language_servers = {
 }
 
 for _, language_server in pairs(language_servers) do
-    lspconfig[language_server].setup{
+    lspconfig[language_server].setup {
         flags = lsp_flags,
         on_attach = on_attach
     }
 end
 
+lspconfig['sumneko_lua'].setup {
+    flags = lsp_flags,
+    on_attach = on_attach,
+    settings = {
+        Lua = {
+            diagnostics = { globals = { 'vim' } }
+        }
+    }
+}

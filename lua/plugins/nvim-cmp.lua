@@ -12,15 +12,15 @@ end
 cmp.setup {
     -- Load snippet support
     snippet = {
-    expand = function(args)
-        luasnip.lsp_expand(args.body)
-    end,
+        expand = function(args)
+            luasnip.lsp_expand(args.body)
+        end,
     },
 
     -- Completion settings
-      completion = {
+    completion = {
         keyword_length = 2
-      },
+    },
 
     -- Key mapping
     mapping = {

@@ -7,4 +7,3 @@ end
 colorizer.setup {
     "*";
 }
-
