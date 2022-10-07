@@ -81,6 +81,10 @@ return require('packer').startup(function(use)
     -- Terminal Toggle
     use { 'akinsho/toggleterm.nvim', tag = '*' }
 
+    -- Package Manager
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
+
     -- Packer  Bootsrap
     if packer_bootstrap then
         require('packer').sync()

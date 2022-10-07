@@ -10,8 +10,8 @@ end
 -- Neovim
 ------------------------------------
 
--- Change leader to a space
-vim.g.mapleader = ' '
+-- Change leader to semicolon
+vim.g.mapleader = ';'
 
 -- Disable arrow keys
 map('', '<up>', '<nop>')

@@ -41,12 +41,24 @@ local lsp_flags = {
     debounce_text_changes = 150,
 }
 
-lspconfig['pyright'].setup{
-    flags = lsp_flags,
-    on_attach = on_attach
+local language_servers = {
+    'bashls',
+    'html',
+    'cssls',
+    'sumneko_lua',
+    'yamlls',
+    'jsonls',
+    'marksman',
+    'pyright',
+    'tsserver',
+    'volar',
+    'intelephense',
 }
-lspconfig['tsserver'].setup{
-    flags = lsp_flags,
-    on_attach = on_attach
-}
+
+for _, language_server in pairs(language_servers) do
+    lspconfig[language_server].setup{
+        flags = lsp_flags,
+        on_attach = on_attach
+    }
+end
 
