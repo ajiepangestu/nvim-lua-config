@@ -94,6 +94,9 @@ return require('packer').startup(function(use)
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
 
+    -- Editory Config
+    use 'gpanders/editorconfig.nvim'
+
     -- Packer  Bootsrap
     if packer_bootstrap then
         require('packer').sync()
