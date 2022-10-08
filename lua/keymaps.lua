@@ -6,6 +6,9 @@ local function map(mode, lhs, rhs, opts)
     vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+local KEYMAPS = {}
+
+-------------------------------------------------------------------
 -- Neovim
 -------------------------------------------------------------------
 -- Change leader to semicolon
@@ -23,7 +26,7 @@ map('i', 'jj', '<Esc>')
 -- Clear search highlighting
 map('n', '<leader>c', ':nohl<CR>')
 
--- Splig horizontal
+-- Split horizontal
 map('n', '<leader>[', '<C-w>v')
 map('n', '<leader>]', '<C-w>h')
 
@@ -40,9 +43,9 @@ map('i', '<leader>w', '<C-c>:w<CR>')
 -- Close Window
 map('n', '<leader>q', ':qa!<CR>')
 map('n', '<leader>d', ':q<CR>')
+
+
 -------------------------------------------------------------------
-
-
 -- Plugin Configurations
 -------------------------------------------------------------------
 -- Nvim Tree
@@ -72,5 +75,26 @@ function LAZYGIT_TOGGLE()
     local lazygit = require('toggleterm.terminal').Terminal:new({ cmd = 'lazygit', hidden = true })
     lazygit:toggle()
 end
+
 map('n', '<leader>g', '<cmd>lua LAZYGIT_TOGGLE()<CR>')
--------------------------------------------------------------------
+
+-- LSP Config
+local opts = { noremap = true, silent = true }
+vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts) -- Show error inline
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts) -- Go to next error
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts) -- Go to previous error
+vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts) -- Show all error in opened file
+
+KEYMAPS.lsp_on_attach = function(_, bufnr)
+    local buffopts = { noremap = true, silent = true, buffer = bufnr }
+    vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, buffopts) -- Create new directory
+    vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, buffopts) -- Remove directory
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, buffopts) -- Show documentation
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, buffopts) -- Goto definition, <C-o> go back
+    vim.keymap.set('n', '<space>r', vim.lsp.buf.rename, buffopts) -- Rename variable
+    vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, buffopts) -- Format Code
+    vim.keymap.set('n', '<space>a', vim.lsp.buf.code_action, buffopts) -- Code action
+    vim.keymap.set('n', 'gr', vim.lsp.buf.references, buffopts) -- Goto references of variable
+end
+
+return KEYMAPS
