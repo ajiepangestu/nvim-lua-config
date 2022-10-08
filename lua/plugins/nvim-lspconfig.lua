@@ -48,6 +48,7 @@ local lsp_flags = {
     debounce_text_changes = 150,
 }
 
+-- List of supported language server
 local language_servers = {
     'bashls', -- bash
     'html', -- html
@@ -68,6 +69,7 @@ for _, language_server in pairs(language_servers) do
     }
 end
 
+-- Lua language server
 lspconfig['sumneko_lua'].setup {
     flags = lsp_flags,
     on_attach = on_attach,
@@ -79,3 +81,19 @@ lspconfig['sumneko_lua'].setup {
         }
     }
 }
+-- Diagnostic Symbols
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+for type, icon in pairs(signs) do
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+end
+-- Diagnostic Symbols Configuration
+vim.diagnostic.config({
+    virtual_text = {
+        prefix = '●'
+    },
+    update_in_insert = true,
+    float = {
+        source = "always",
+    },
+})
