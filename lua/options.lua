@@ -1,3 +1,4 @@
+local g = vim.g
 local opt = vim.opt
 
 -- General Configurations
@@ -23,4 +24,38 @@ opt.history = 100 -- Remember N lines in history
 opt.lazyredraw = true -- Faster scrolling
 opt.undodir = '~/.nvim/data/backup' -- Undo directory
 opt.encoding = 'UTF-8' -- Encoding
-opt.shortmess:append "sI" -- Disable NeoVIM Intro
+opt.shortmess:append 'sI' -- Disable NeoVIM Intro
+
+-- Disabled builtin plugins
+local disabled_builtin_plugins = {
+    '2html_plugin',
+    'getscript',
+    'getscriptPlugin',
+    'gzip',
+    'logipat',
+    'netrw',
+    'netrwPlugin',
+    'netrwSettings',
+    'netrwFileHandlers',
+    'matchit',
+    'tar',
+    'tarPlugin',
+    'rrhelper',
+    'spellfile_plugin',
+    'vimball',
+    'vimballPlugin',
+    'zip',
+    'zipPlugin',
+    'tutor',
+    'rplugin',
+    'synmenu',
+    'optwin',
+    'compiler',
+    'bugreport',
+    'ftplugin',
+}
+
+g.loaded = 1
+for _, plugin in pairs(disabled_builtin_plugins) do
+    g['loaded_' .. plugin] = 1
+end

@@ -66,4 +66,11 @@ map('t', '<leader>j', [[<Cmd>wincmd j<CR>]])
 map('t', '<leader>k', [[<Cmd>wincmd k<CR>]])
 map('t', '<leader>l', [[<Cmd>wincmd l<CR>]])
 map('t', '<leader>h', [[<Cmd>wincmd h<CR>]])
+
+-- Lazy git
+function LAZYGIT_TOGGLE()
+    local lazygit = require('toggleterm.terminal').Terminal:new({ cmd = 'lazygit', hidden = true })
+    lazygit:toggle()
+end
+map('n', '<leader>g', '<cmd>lua LAZYGIT_TOGGLE()<CR>')
 -------------------------------------------------------------------

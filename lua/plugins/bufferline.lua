@@ -10,9 +10,9 @@ bufferline.setup {
         separator_style = 'thick',
         offsets = {
             {
-                filetype = "NvimTree",
-                text = "File Explorer",
-                text_align = "center",
+                filetype = 'NvimTree',
+                text = 'File Explorer',
+                text_align = 'center',
                 separator = true
             }
         }

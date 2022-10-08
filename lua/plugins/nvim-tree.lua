@@ -6,6 +6,7 @@ end
 
 nvim_tree.setup {
     auto_reload_on_write = true,
+    open_on_setup = true,
     filters = {
         dotfiles = false,
         custom = { '^.git$' }

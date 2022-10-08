@@ -19,16 +19,16 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- File Manager
-    use 'kyazdani42/nvim-tree.lua'
+    use 'nvim-tree/nvim-tree.lua'
+
+    -- Icons
+    use 'nvim-tree/nvim-web-devicons'
 
     -- Indent line
     use 'lukas-reineke/indent-blankline.nvim'
 
     -- Autopair
     use 'windwp/nvim-autopairs'
-
-    -- Icons
-    use 'kyazdani42/nvim-web-devicons'
 
     -- Multi Cursor
     use { 'mg979/vim-visual-multi', branch = 'master' }
@@ -86,6 +86,9 @@ return require('packer').startup(function(use)
         'https://gitlab.com/__tpb/monokai-pro.nvim',
         as = 'monokai-pro.nvim'
     }
+
+    -- Search and replace
+    use 's1n7ax/nvim-search-and-replace'
 
     -- Package Manager
     use 'williamboman/mason.nvim'

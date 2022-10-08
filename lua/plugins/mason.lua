@@ -1,5 +1,5 @@
 -- Package Manager
-local status_ok, mason = pcall(require, "mason")
+local status_ok, mason = pcall(require, 'mason')
 if not status_ok then
     return
 end

@@ -6,6 +6,6 @@ end
 
 nvim_autopairs.setup {
     disable_filetype = {
-        "TelescopePrompt"
+        'TelescopePrompt'
     },
 }
