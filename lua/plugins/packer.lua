@@ -94,6 +94,9 @@ return require('packer').startup(function(use)
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
 
+    -- Session
+    use 'natecraddock/sessions.nvim'
+
     -- Editory Config
     use 'gpanders/editorconfig.nvim'
 

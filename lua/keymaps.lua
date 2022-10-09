@@ -40,9 +40,8 @@ map('n', '<leader>l', '<C-w>l')
 map('n', '<leader>w', ':w<CR>')
 map('i', '<leader>w', '<C-c>:w<CR>')
 
--- Close Window
+-- Close NeoVIM
 map('n', '<leader>q', ':qa!<CR>')
-map('n', '<leader>d', ':q<CR>')
 
 
 -------------------------------------------------------------------
@@ -52,8 +51,9 @@ map('n', '<leader>d', ':q<CR>')
 map('n', '<C-e>', ':NvimTreeToggle<CR>')
 
 -- Bufferline
-map('n', '<leader>p', ':bprevious<CR>')
-map('n', '<leader>n', ':bnext<CR>')
+map('n', '<leader>p', ':bp<CR>') -- Goto previous tab
+map('n', '<leader>n', ':bn<CR>') -- Goto next tab
+map('n', '<leader>d', ':bd<CR>') -- Close tab
 
 -- File Finder
 map('n', '<leader>ff', ':Telescope find_files<CR>')
