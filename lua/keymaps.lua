@@ -28,7 +28,7 @@ map('n', '<leader>c', ':nohl<CR>')
 
 -- Split horizontal
 map('n', '<leader>[', '<C-w>v')
-map('n', '<leader>]', '<C-w>h')
+map('n', '<leader>]', '<C-w>s')
 
 -- Move focus
 map('n', '<leader>h', '<C-w>h')
