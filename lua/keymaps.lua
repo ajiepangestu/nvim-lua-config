@@ -56,9 +56,9 @@ map('n', '<leader>p', ':bprevious<CR>')
 map('n', '<leader>n', ':bnext<CR>')
 
 -- File Finder
-map('n', 'ff', ':Telescope find_files<CR>')
-map('n', 'fg', ':Telescope live_grep<CR>')
-map('n', 'fb', ':Telescope file_browser<CR>')
+map('n', '<leader>ff', ':Telescope find_files<CR>')
+map('n', '<leader>fg', ':Telescope live_grep<CR>')
+map('n', '<leader>fb', ':Telescope file_browser<CR>')
 
 -- Terminal
 map('n', '<leader>t', ':ToggleTerm<CR>')
