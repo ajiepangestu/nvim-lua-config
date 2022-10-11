@@ -18,6 +18,7 @@ local language_servers = {
     'jsonls', -- json with comment
     'marksman', -- markdown
     'pyright', -- python
+    'eslint', -- javascript
     'tsserver', -- typescript
     'volar', -- vue
     'intelephense', -- php

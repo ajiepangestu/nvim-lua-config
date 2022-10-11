@@ -13,6 +13,7 @@ mason_lspconfig.setup {
         'yamlls', -- lua
         'jsonls', -- json with comment
         'marksman', -- markdown
+        'eslint', -- javascript
         'pyright', -- python
         'tsserver', -- typescript
         'volar', -- vue
