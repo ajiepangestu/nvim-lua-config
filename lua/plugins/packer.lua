@@ -90,6 +90,12 @@ return require('packer').startup(function(use)
     -- Search and replace
     use 's1n7ax/nvim-search-and-replace'
 
+    -- Autotag
+    use "windwp/nvim-ts-autotag"
+
+    -- Formatter and Linter
+    use 'jose-elias-alvarez/null-ls.nvim'
+
     -- Package Manager
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'

@@ -20,7 +20,7 @@ local language_servers = {
     'pyright', -- python
     'eslint', -- javascript
     'tsserver', -- typescript
-    'volar', -- vue
+    'vuels', -- vue
     'intelephense', -- php
 }
 

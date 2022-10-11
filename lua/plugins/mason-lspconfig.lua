@@ -16,7 +16,7 @@ mason_lspconfig.setup {
         'eslint', -- javascript
         'pyright', -- python
         'tsserver', -- typescript
-        'volar', -- vue
+        'vuels', -- vue
         'intelephense', -- php
     }
 }
