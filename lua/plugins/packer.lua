@@ -98,7 +98,12 @@ return require('packer').startup(function(use)
 
     -- Package Manager
     use 'williamboman/mason.nvim'
+
+    -- LSP Package Manager
     use 'williamboman/mason-lspconfig.nvim'
+
+    -- Formatter and Linter
+    use 'jayp0521/mason-null-ls.nvim'
 
     -- Session
     use 'natecraddock/sessions.nvim'
