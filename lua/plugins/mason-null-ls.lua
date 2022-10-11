@@ -17,8 +17,7 @@ mason_null_ls.setup {
         'hadolint', -- dockerfile
         'pylint', -- python
         'yamllint', -- yaml
-        'eslint_d', -- js
-        'cmakelang', -- makefile
+        'eslint_d', -- js, eslint
         'markdownlint', -- markdown
         'misspell', -- spelling checking
     }
