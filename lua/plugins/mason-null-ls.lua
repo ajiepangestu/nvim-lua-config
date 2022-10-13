@@ -7,18 +7,11 @@ end
 mason_null_ls.setup {
     ensure_installed = {
         -- Formatter
-        'stylua', -- lua
         'autopep8', -- python
         'prettier', -- js, ts, json, md, yaml
-        'phpcbf', -- php
-        'clang_format', -- c, cpp, cs, java, cuda
 
         -- Linter
-        'hadolint', -- dockerfile
         'pylint', -- python
-        'yamllint', -- yaml
-        'eslint_d', -- js, eslint
-        'markdownlint', -- markdown
         'misspell', -- spelling checking
     }
 }

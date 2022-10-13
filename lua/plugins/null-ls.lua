@@ -4,6 +4,8 @@ if not status_ok then
 	return
 end
 
+-- Code action
+local code_actions = null_ls.builtins.code_actions
 -- Diagnostic
 local diagnostics = null_ls.builtins.diagnostics
 -- Formatting
@@ -11,50 +13,16 @@ local formatting = null_ls.builtins.formatting
 
 -- Sources
 local sources = {
-	-- Formatter
-	-- lua
-	formatting.stylua.with({
-		filetypes = { "lua" },
-	}),
-	-- python
-	formatting.autopep8.with({
-		filetypes = { "python" },
-	}),
-	-- js, ts, json, md, yaml
-	formatting.prettier.with({
-		filetypes = { "javascript", "typescript", "json", "markdown", "yaml" },
-	}),
-	-- php
-	formatting.phpcbf.with({
-		filetypes = { "php" },
-	}),
-	-- c
-	formatting.clang_format.with({
-		filetypes = { "c", "cpp", "cs", "java", "cuda" },
-	}),
-	-- End of formatter
+	-- Python
+	code_actions.pylint,
+	diagnostics.pylint,
+	formatting.autopep8,
 
-	-- Linter
-	-- dockerfile
-	diagnostics.hadolint.with({
-		filetypes = { "dockerfile" },
-	}),
-	-- python
-	diagnostics.pylint.with({
-		filetypes = { "python" },
-	}),
-	-- yaml
-	diagnostics.yamllint.with({
-		filetypes = { "yaml" },
-	}),
-	-- js, eslint
-	diagnostics.eslint.with({
-		filetypes = { "javascript", "typescript" },
-	}),
-	-- markdown
-	diagnostics.markdownlint.with({
-		filetypes = { "markdown" },
-	}),
+	-- JS, TS
+	code_actions.eslint,
+	diagnostics.eslint,
+	formatting.prettier,
+
 	-- Spell Checker
 	diagnostics.misspell,
 }
