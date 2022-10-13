@@ -14,7 +14,6 @@ local formatting = null_ls.builtins.formatting
 -- Sources
 local sources = {
 	-- Python
-	code_actions.pylint,
 	diagnostics.pylint,
 	formatting.autopep8,
 
