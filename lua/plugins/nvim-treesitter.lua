@@ -17,7 +17,9 @@ nvim_treesitter.setup {
         'markdown',
         'python',
         'typescript',
-        'php'
+        'php',
+        'vue',
+        'dockerfile'
     },
     sync_install = true,
     highlight = {
