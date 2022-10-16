@@ -3,7 +3,7 @@ local opt = vim.opt
 
 -- General Configurations
 opt.mouse = 'a' -- Enable mouse support
--- opt.clipboard = 'unnamedplus' -- Copy/paste to system clipboard
+opt.clipboard = 'unnamedplus' -- Copy/paste to system clipboard
 opt.swapfile = false -- Don't use swapfile
 opt.completeopt = 'menuone,noinsert,noselect' -- Autocomplete options
 opt.number = true -- Show line number
@@ -59,3 +59,4 @@ g.loaded = 1
 for _, plugin in pairs(disabled_builtin_plugins) do
     g['loaded_' .. plugin] = 1
 end
+
