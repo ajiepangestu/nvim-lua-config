@@ -49,6 +49,7 @@ map('n', '<leader>q', ':qa!<CR>')
 -------------------------------------------------------------------
 -- Nvim Tree
 map('n', '<C-e>', ':NvimTreeToggle<CR>')
+map('n', '<leader>e', ':NvimTreeFocus<CR>')
 
 -- Bufferline
 map('n', '<leader>p', ':bp<CR>') -- Goto previous tab

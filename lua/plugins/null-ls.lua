@@ -14,17 +14,23 @@ local formatting = null_ls.builtins.formatting
 -- Sources
 local sources = {
     -- Python
-    diagnostics.pylint.with {
+    diagnostics.pylint.with({
         prefer_local = ".venv/bin"
-    },
-    formatting.autopep8.with {
+    }),
+    formatting.autopep8.with({
         prefer_local = ".venv/bin"
-    },
+    }),
 
     -- JS, TS
-    code_actions.eslint,
-    diagnostics.eslint,
-    formatting.prettier,
+    code_actions.eslint.with({
+        prefer_local = "node_modules/.bin"
+    }),
+    diagnostics.eslint.with({
+        prefer_local = "node_modules/.bin"
+    }),
+    formatting.prettier.with({
+        prefer_local = "node_modules/.bin"
+    }),
 
     -- Spell Checker
     code_actions.cspell.with {
