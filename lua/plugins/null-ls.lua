@@ -33,16 +33,12 @@ local sources = {
     }),
 
     -- Spell Checker
-    code_actions.cspell.with {
-        filetypes = { '*' }
-    },
-    diagnostics.misspell.with {
-        filetypes = { '*' }
-    },
+    code_actions.cspell,
+    diagnostics.misspell,
 }
 
 null_ls.setup({
     sources = sources,
-    debug = false,
+    debug = true,
     update_in_insert = true
 })
