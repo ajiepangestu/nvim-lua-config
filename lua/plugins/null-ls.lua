@@ -1,7 +1,7 @@
 -- Formatter and Linter
 local status_ok, null_ls = pcall(require, "null-ls")
 if not status_ok then
-	return
+    return
 end
 
 -- Code action
@@ -13,20 +13,25 @@ local formatting = null_ls.builtins.formatting
 
 -- Sources
 local sources = {
-	-- Python
-	diagnostics.pylint,
-	formatting.autopep8,
+    -- Python
+    diagnostics.pylint.with {
+        prefer_local = ".venv/bin"
+    },
+    formatting.autopep8.with {
+        prefer_local = ".venv/bin"
+    },
 
-	-- JS, TS
-	code_actions.eslint,
-	diagnostics.eslint,
-	formatting.prettier,
+    -- JS, TS
+    code_actions.eslint,
+    diagnostics.eslint,
+    formatting.prettier,
 
-	-- Spell Checker
-	diagnostics.misspell,
+    -- Spell Checker
+    diagnostics.misspell,
 }
 
 null_ls.setup({
-	sources = sources,
-	debug = true,
+    sources = sources,
+    debug = false,
+    update_in_insert = true
 })
