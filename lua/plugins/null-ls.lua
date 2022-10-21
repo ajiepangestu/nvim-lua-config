@@ -27,7 +27,12 @@ local sources = {
     formatting.prettier,
 
     -- Spell Checker
-    diagnostics.misspell,
+    code_actions.cspell.with {
+        filetypes = { '*' }
+    },
+    diagnostics.misspell.with {
+        filetypes = { '*' }
+    },
 }
 
 null_ls.setup({

@@ -91,10 +91,12 @@ KEYMAPS.lsp_on_attach = function(_, bufnr)
     vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, buffopts) -- Remove directory
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, buffopts) -- Show documentation
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, buffopts) -- Goto definition, <C-o> go back
+    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, buffopts) -- Goto declaration
+    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, buffopts) -- Goto implementation
+    vim.keymap.set('n', 'gr', vim.lsp.buf.references, buffopts) -- Goto references of variable
     vim.keymap.set('n', '<space>r', vim.lsp.buf.rename, buffopts) -- Rename variable
     vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, buffopts) -- Format Code
     vim.keymap.set('n', '<space>a', vim.lsp.buf.code_action, buffopts) -- Code action
-    vim.keymap.set('n', 'gr', vim.lsp.buf.references, buffopts) -- Goto references of variable
 end
 
 return KEYMAPS
