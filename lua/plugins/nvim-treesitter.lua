@@ -11,6 +11,7 @@ nvim_treesitter.setup {
         'html',
         'javascript',
         'css',
+        'scss',
         'lua',
         'yaml',
         'jsonc',
