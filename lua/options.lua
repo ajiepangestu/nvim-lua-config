@@ -60,4 +60,3 @@ g.loaded = 1
 for _, plugin in pairs(disabled_builtin_plugins) do
     g['loaded_' .. plugin] = 1
 end
-

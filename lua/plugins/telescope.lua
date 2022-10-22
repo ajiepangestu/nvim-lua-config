@@ -6,5 +6,10 @@ end
 
 telescope.setup {}
 
+-- Telescope Extensions
 telescope.load_extension('file_browser')
-telescope.load_extension('projects')
+
+local extension, _ = pcall(require, 'project_nvim')
+if extension then
+    telescope.load_extension('projects')
+end
