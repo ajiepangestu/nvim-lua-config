@@ -33,8 +33,7 @@ local sources = {
     }),
 
     -- Spell Checker
-    code_actions.cspell,
-    diagnostics.misspell,
+    diagnostics.codespell,
 }
 
 null_ls.setup({

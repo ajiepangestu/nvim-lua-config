@@ -12,7 +12,6 @@ mason_null_ls.setup {
 
         -- Linter
         'pylint', -- python
-        'misspell', -- spell checking
-        'cspell' -- spell checking
+        'codespell', -- spell checker
     }
 }
