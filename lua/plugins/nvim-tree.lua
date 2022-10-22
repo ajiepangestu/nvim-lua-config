@@ -20,5 +20,8 @@ nvim_tree.setup {
             enable = true,
             inline_arrows = false,
         },
+    },
+    view = {
+        adaptive_size = true
     }
 }
