@@ -105,13 +105,13 @@ return require('packer').startup(function(use)
     -- Formatter and Linter
     use 'jayp0521/mason-null-ls.nvim'
 
-    -- Session
-    use 'natecraddock/sessions.nvim'
-
     -- Editory Config
     use 'gpanders/editorconfig.nvim'
 
-    -- Packer  Bootsrap
+    -- Project Manager
+    use 'ahmedkhalf/project.nvim'
+
+    -- Packer  Bootstrap
     if packer_bootstrap then
         require('packer').sync()
     end
