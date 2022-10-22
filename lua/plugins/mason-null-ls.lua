@@ -6,12 +6,14 @@ end
 
 mason_null_ls.setup {
     ensure_installed = {
-        -- Formatter
-        'autopep8', -- python
-        'prettier', -- js, ts, json, md, yaml
+        -- Python
+        'pylint', -- linter
+        'autopep8', -- formatter
 
-        -- Linter
-        'pylint', -- python
-        'codespell', -- spell checker
+        -- JavaScript, TypeScript
+        'eslint', -- linter, formatter, code actions
+
+        -- Spell Checker
+        'codespell', -- linter
     }
 }

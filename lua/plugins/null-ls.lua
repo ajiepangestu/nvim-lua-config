@@ -1,4 +1,4 @@
--- Formatter and Linter
+-- (Linter, Formatter and Code Actions) Bridge for non LSP
 local status_ok, null_ls = pcall(require, "null-ls")
 if not status_ok then
     return
@@ -21,14 +21,14 @@ local sources = {
         prefer_local = ".venv/bin"
     }),
 
-    -- JS, TS
+    -- JavaScript, TypeScript
     code_actions.eslint.with({
         prefer_local = "node_modules/.bin"
     }),
     diagnostics.eslint.with({
         prefer_local = "node_modules/.bin"
     }),
-    formatting.prettier.with({
+    formatting.eslint.with({
         prefer_local = "node_modules/.bin"
     }),
 
