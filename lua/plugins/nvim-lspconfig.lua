@@ -9,6 +9,8 @@ local lsp_flags = {
     debounce_text_changes = 150,
 }
 
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 -- List of supported language server
 local language_servers = {
     'bashls', -- bash
@@ -27,7 +29,8 @@ local language_servers = {
 for _, language_server in pairs(language_servers) do
     lspconfig[language_server].setup {
         flags = lsp_flags,
-        on_attach = on_attach
+        on_attach = on_attach,
+        capabilities = capabilities
     }
 end
 
@@ -35,6 +38,7 @@ end
 lspconfig['sumneko_lua'].setup {
     flags = lsp_flags,
     on_attach = on_attach,
+    capabilities = capabilities,
     settings = {
         Lua = {
             diagnostics = {
