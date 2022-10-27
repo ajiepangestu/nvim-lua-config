@@ -6,7 +6,7 @@ end
 
 lualine.setup {
     options = {
-        theme = 'monokaipro',
+        theme = 'gruvbox',
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
     },

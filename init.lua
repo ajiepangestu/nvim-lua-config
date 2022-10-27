@@ -1,16 +1,15 @@
 -- General
 require('keymaps')
 require('options')
+require('colors')
 
 -- Plugins
 require('plugins/packer')
 require('plugins/bufferline')
--- require('plugins/onedark')
 require('plugins/lualine')
 require('plugins/mason')
 require('plugins/mason-lspconfig')
 require('plugins/mason-null-ls')
-require('plugins/monokaipro')
 require('plugins/null-ls')
 require('plugins/gitsigns')
 require('plugins/indent-blankline')

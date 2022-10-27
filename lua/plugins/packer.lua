@@ -18,6 +18,16 @@ return require('packer').startup(function(use)
     -- Packer Plugin Manager
     use 'wbthomason/packer.nvim'
 
+    -- Gruvbox Theme
+    use 'ellisonleao/gruvbox.nvim'
+    -- Monokai Pro Theme
+    -- use {
+    --     'https://gitlab.com/__tpb/monokai-pro.nvim',
+    --     as = 'monokai-pro.nvim'
+    -- }
+    -- -- One Dark Theme
+    -- use 'navarasu/onedark.nvim'
+
     -- File Manager
     use 'nvim-tree/nvim-tree.lua'
 
@@ -35,9 +45,6 @@ return require('packer').startup(function(use)
 
     -- Treesitter (Syntax Highlighting)
     use 'nvim-treesitter/nvim-treesitter'
-
-    -- Color Scheme
-    use 'navarasu/onedark.nvim'
 
     -- Colorizer
     use 'norcalli/nvim-colorizer.lua'
@@ -80,12 +87,6 @@ return require('packer').startup(function(use)
 
     -- Terminal Toggle
     use { 'akinsho/toggleterm.nvim', tag = '*' }
-
-    -- Monokai Pro
-    use {
-        'https://gitlab.com/__tpb/monokai-pro.nvim',
-        as = 'monokai-pro.nvim'
-    }
 
     -- Search and replace
     use 's1n7ax/nvim-search-and-replace'
