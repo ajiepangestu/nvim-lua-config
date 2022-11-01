@@ -57,7 +57,7 @@ map('n', '<leader>n', ':bn<CR>') -- Goto next tab
 map('n', '<leader>d', ':bd<CR>') -- Close tab
 
 -- File Finder
-map('n', '<leader>ff', ':Telescope find_files<CR>')
+map('n', '<leader>ff', ':Telescope find_files hidden=true no_ignore=true<CR>')
 map('n', '<leader>fg', ':Telescope live_grep<CR>')
 map('n', '<leader>fb', ':Telescope file_browser<CR>')
 map('n', '<leader>fp', ':Telescope projects<CR>')

@@ -4,7 +4,15 @@ if not status_ok then
     return
 end
 
-telescope.setup {}
+telescope.setup {
+    defaults = {
+        file_ignore_patterns = {
+            '.git', -- git folder
+            'node_modules', -- nodejs libs
+            '.venv' -- python environment
+        }
+    }
+}
 
 -- Telescope Extensions
 telescope.load_extension('file_browser')
