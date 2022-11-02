@@ -6,7 +6,6 @@ end
 
 lualine.setup {
     options = {
-        theme = 'monokaipro',
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
     },

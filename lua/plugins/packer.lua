@@ -19,14 +19,16 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Gruvbox Theme
-    -- use 'ellisonleao/gruvbox.nvim'
+    use 'ellisonleao/gruvbox.nvim'
+
     -- Monokai Pro Theme
     use {
         'https://gitlab.com/__tpb/monokai-pro.nvim',
         as = 'monokai-pro.nvim'
     }
-    -- -- One Dark Theme
-    -- use 'navarasu/onedark.nvim'
+
+    -- One Dark Theme
+    use 'navarasu/onedark.nvim'
 
     -- File Manager
     use 'nvim-tree/nvim-tree.lua'

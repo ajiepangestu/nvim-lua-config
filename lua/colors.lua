@@ -1,4 +1,3 @@
---------------------------------------------------------
 -- Gruvbox Theme
 --------------------------------------------------------
 -- local status_ok, _ = pcall(require, 'gruvbox')
@@ -8,7 +7,6 @@
 -- vim.o.background = 'dark'
 -- vim.cmd([[colorscheme gruvbox]])
 
---------------------------------------------------------
 -- One Dark Theme
 --------------------------------------------------------
 -- local status_ok, onedark = pcall(require, 'onedark')
@@ -16,17 +14,15 @@
 --     return
 -- end
 -- onedark.setup {
---     style = 'darker'
+--     style = 'deep'
 -- }
 -- onedark.load()
 
---------------------------------------------------------
 -- Monokai Theme
 --------------------------------------------------------
 local status_ok, _ = pcall(require, 'monokaipro')
 if not status_ok then
     return
 end
-vim.g.monokaipro_filter = 'spectrum'
-vim.g.monokaipro_sidebars = {'packer'}
+vim.g.monokaipro_filter = 'octogon'
 vim.cmd [[colorscheme monokaipro]]
