@@ -57,9 +57,7 @@ end
 
 -- Diagnostic Symbols Configuration
 vim.diagnostic.config({
-    virtual_text = {
-        prefix = '●'
-    },
+    virtual_text = false,
     update_in_insert = true,
     float = {
         source = 'always',
