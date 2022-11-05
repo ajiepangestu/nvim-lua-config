@@ -1,0 +1,6 @@
+{
+  "Lua.telemetry.enable": false,
+  "Lua.diagnostics.globals": ["vim"],
+  "python.linting.pylintEnabled": true,
+  "python.formatting.provider": "autopep8"
+}

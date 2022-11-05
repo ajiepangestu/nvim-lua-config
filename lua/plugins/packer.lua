@@ -67,9 +67,6 @@ return require('packer').startup(function(use)
     -- Comment
     use 'terrortylor/nvim-comment'
 
-    -- LSP
-    use 'neovim/nvim-lspconfig'
-
     -- Auto Complete
     use {
         'hrsh7th/nvim-cmp',
@@ -96,18 +93,6 @@ return require('packer').startup(function(use)
     -- Autotag
     use "windwp/nvim-ts-autotag"
 
-    -- Formatter and Linter
-    use 'jose-elias-alvarez/null-ls.nvim'
-
-    -- Package Manager
-    use 'williamboman/mason.nvim'
-
-    -- LSP Package Manager
-    use 'williamboman/mason-lspconfig.nvim'
-
-    -- Formatter and Linter
-    use 'jayp0521/mason-null-ls.nvim'
-
     -- Editory Config
     use 'gpanders/editorconfig.nvim'
 
@@ -116,6 +101,9 @@ return require('packer').startup(function(use)
 
     -- Scrollbar
     use 'petertriho/nvim-scrollbar'
+
+    -- COC
+    use {'neoclide/coc.nvim', branch = 'release'}
 
     -- Packer  Bootstrap
     if packer_bootstrap then
