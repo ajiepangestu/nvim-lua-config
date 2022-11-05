@@ -5,7 +5,7 @@ local opt = vim.opt
 -- Additional Configuration
 opt.backup = false
 opt.writebackup = false
-opt.updatetime = 200
+opt.updatetime = 300
 opt.signcolumn = "yes"
 
 -- COC Extensions
