@@ -67,20 +67,6 @@ return require('packer').startup(function(use)
     -- Comment
     use 'terrortylor/nvim-comment'
 
-    -- Auto Complete
-    use {
-        'hrsh7th/nvim-cmp',
-        requires = {
-            'hrsh7th/cmp-nvim-lsp',
-            'hrsh7th/cmp-buffer',
-            'hrsh7th/cmp-path',
-            'hrsh7th/cmp-cmdline',
-            -- Lua Snip
-            'L3MON4D3/LuaSnip',
-            'saadparwaiz1/cmp_luasnip',
-        }
-    }
-
     -- Git Commit Label
     use { 'lewis6991/gitsigns.nvim', tag = 'release' }
 
