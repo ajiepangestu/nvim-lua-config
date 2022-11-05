@@ -6,7 +6,7 @@ local opt = vim.opt
 opt.backup = false
 opt.writebackup = false
 opt.updatetime = 300
-opt.signcolumn = "yes"
+opt.signcolumn = 'yes'
 
 -- COC Extensions
 g.coc_global_extensions = {
