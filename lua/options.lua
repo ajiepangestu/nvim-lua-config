@@ -59,3 +59,13 @@ local plugins = {
 for _, plugin in pairs(plugins) do
     g['loaded_' .. plugin] = 1
 end
+
+-- Disable Language Provider
+local languages = {
+    'ruby',
+    'perl'
+}
+for _, language in pairs(languages) do
+    g['loaded_' .. language .. '_provider'] = 0
+end
+
