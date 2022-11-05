@@ -27,8 +27,8 @@ opt.undodir = '~/.nvim/data/backup' -- Undo directory
 opt.encoding = 'UTF-8' -- Encoding
 opt.shortmess:append 'sI' -- Disable NeoVIM Intro
 
--- Disabled builtin plugins
-local disabled_builtin_plugins = {
+-- Disable builtin plugins
+local plugins = {
     '2html_plugin',
     'getscript',
     'getscriptPlugin',
@@ -56,7 +56,6 @@ local disabled_builtin_plugins = {
     'ftplugin',
 }
 
-g.loaded = 1
-for _, plugin in pairs(disabled_builtin_plugins) do
+for _, plugin in pairs(plugins) do
     g['loaded_' .. plugin] = 1
 end
