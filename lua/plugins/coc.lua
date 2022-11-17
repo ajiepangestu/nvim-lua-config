@@ -26,4 +26,3 @@ g.coc_global_extensions = {
     'coc-vetur',
     'coc-yaml'
 }
-
