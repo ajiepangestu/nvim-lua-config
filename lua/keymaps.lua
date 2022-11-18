@@ -105,14 +105,31 @@ function _G.show_docs()
 end
 
 -- Autocomplete
-keyset("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()',
-    { silent = true, noremap = true, expr = true, replace_keycodes = false }
+keyset("i", "<C-j>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()',
+    {
+        silent = true,
+        noremap = true,
+        expr = true,
+        replace_keycodes = false
+    }
 ) -- Goto next autocomplete suggestions
-keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]],
-    { silent = true, noremap = true, expr = true, replace_keycodes = false }
+
+keyset("i", "<C-k>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]],
+    {
+        silent = true,
+        noremap = true,
+        expr = true,
+        replace_keycodes = false
+    }
 ) -- Goto previous autocomplete suggestions
-keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]],
-    { silent = true, noremap = true, expr = true, replace_keycodes = false }
+
+keyset("i", "<CR>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]],
+    {
+        silent = true,
+        noremap = true,
+        expr = true,
+        replace_keycodes = false
+    }
 ) -- Select autocomplete suggestion
 
 -- Coding Helper
