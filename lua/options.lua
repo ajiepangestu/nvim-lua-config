@@ -69,3 +69,6 @@ for _, language in pairs(languages) do
     g['loaded_' .. language .. '_provider'] = 0
 end
 
+-- Python Host
+g.python3_host_prog = '~/.virtualenvs/python/bin/python'
+
