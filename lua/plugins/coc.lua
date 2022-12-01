@@ -24,5 +24,6 @@ g.coc_global_extensions = {
     'coc-tslint-plugin',
     'coc-tsserver',
     'coc-vetur',
-    'coc-yaml'
+    'coc-yaml',
+    'coc-omnisharp'
 }
