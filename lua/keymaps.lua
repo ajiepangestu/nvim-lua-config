@@ -78,77 +78,27 @@ end
 
 map('n', '<leader>g', '<cmd>lua LAZYGIT_TOGGLE()<CR>')
 
--- COC
-local api = vim.api
-local cmd = api.nvim_command
-local fn = vim.fn
-local keyset = vim.keymap.set
+local KEYMAPS = {}
 
--- Auto complete
-function _G.check_back_space()
-    local col = fn.col('.') - 1
-    return col == 0 or fn.getline('.'):sub(col, col):match('%s') ~= nil
+-- LSP Config
+local opts = { noremap = true, silent = true }
+vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts) -- Show error inline
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts) -- Go to next error
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts) -- Go to previous error
+vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts) -- Show all error in opened file
+
+KEYMAPS.lsp_on_attach = function(_, bufnr)
+    local buffopts = { noremap = true, silent = true, buffer = bufnr }
+    vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, buffopts) -- Create new directory
+    vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, buffopts) -- Remove directory
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, buffopts) -- Show documentation
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, buffopts) -- Goto definition, <C-o> go back
+    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, buffopts) -- Goto declaration
+    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, buffopts) -- Goto implementation
+    vim.keymap.set('n', 'gr', vim.lsp.buf.references, buffopts) -- Goto references of variable
+    vim.keymap.set('n', '<space>r', vim.lsp.buf.rename, buffopts) -- Rename variable
+    vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, buffopts) -- Format Code
+    vim.keymap.set('n', '<space>a', vim.lsp.buf.code_action, buffopts) -- Code action
 end
 
--- Show Documentation
-function _G.show_docs()
-    local cw = fn.expand('<cword>')
-    if fn.index({ 'vim', 'help' }, vim.bo.filetype) >= 0 then
-        cmd('h ' .. cw)
-    elseif api.nvim_eval('coc#rpc#ready()') then
-        fn.CocActionAsync('doHover')
-    else
-        cmd('!' .. vim.o.keywordprg .. ' ' .. cw)
-    end
-end
-
--- Autocomplete
-keyset("i", "<C-j>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()',
-    {
-        silent = true,
-        noremap = true,
-        expr = true,
-        replace_keycodes = false
-    }
-) -- Goto next autocomplete suggestions
-
-keyset("i", "<C-k>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]],
-    {
-        silent = true,
-        noremap = true,
-        expr = true,
-        replace_keycodes = false
-    }
-) -- Goto previous autocomplete suggestions
-
-keyset("i", "<CR>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]],
-    {
-        silent = true,
-        noremap = true,
-        expr = true,
-        replace_keycodes = false
-    }
-) -- Select autocomplete suggestion
-
--- Coding Helper
-keyset("n", "[d", "<Plug>(coc-diagnostic-prev)", { silent = true }) -- Goto next rror
-keyset("n", "]d", "<Plug>(coc-diagnostic-next)", { silent = true }) -- Goto previous error
-keyset("n", "gd", "<Plug>(coc-definition)", { silent = true }) -- Goto definition
-keyset("n", "gy", "<Plug>(coc-type-definition)", { silent = true }) -- Goto  type definition
-keyset("n", "gi", "<Plug>(coc-implementation)", { silent = true }) -- Goto implementation
-keyset("n", "gr", "<Plug>(coc-references)", { silent = true }) -- Goto references
-keyset("n", "K", '<CMD>lua _G.show_docs()<CR>', { silent = true }) -- Show documentation
-keyset("n", "<space>r", "<Plug>(coc-rename)", { silent = true }) -- Rename variable
-keyset("n", "<space>q", ":<C-u>CocList diagnostics<cr>", { silent = true, nowait = true }) -- Show all diagnostics
-keyset("n", "<space>s", ":<C-u>CocList -I symbols<cr>", { silent = true, nowait = true }) -- Show all symbols
-keyset("n", "<space>o", ":<C-u>CocList outline<cr>", { silent = true, nowait = true }) -- Show outline
-
--- Code Action
-keyset("x", "<space>a", "<Plug>(coc-codeaction-selected)", { silent = true, nowait = true })
-keyset("n", "<space>a", "<Plug>(coc-codeaction-selected)", { silent = true, nowait = true })
-keyset("n", "<space>ac", "<Plug>(coc-codeaction)", { silent = true, nowait = true })
-
--- Format Code
-keyset("n", "<space>f", "<Plug>(coc-format-selected)", { silent = true })
-keyset("x", "<space>f", "<Plug>(coc-format-selected)", { silent = true })
-
+return KEYMAPS
