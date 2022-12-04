@@ -18,5 +18,6 @@ mason_lspconfig.setup {
         'tsserver', -- typescript
         'vuels', -- vue
         'intelephense', -- php
+        'omnisharp' -- c#
     }
 }

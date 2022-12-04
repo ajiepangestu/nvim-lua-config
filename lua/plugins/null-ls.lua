@@ -15,14 +15,11 @@ local formatting = null_ls.builtins.formatting
 local sources = {
     -- Python
     diagnostics.pylint.with {
-        prefer_local = '.venv/bin',
         extra_args = {
             '--rc-file=' .. vim.fn.getcwd() .. '/.pylintrc'
         }
     },
-    formatting.autopep8.with {
-        prefer_local = '.venv/bin'
-    },
+    formatting.autopep8,
 
     -- JavaScript, TypeScript
     code_actions.eslint.with {

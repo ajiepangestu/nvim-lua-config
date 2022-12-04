@@ -20,7 +20,10 @@ nvim_treesitter.setup {
         'typescript',
         'php',
         'vue',
-        'dockerfile'
+        'dockerfile',
+        'c_sharp',
+        'cpp',
+        'c'
     },
     sync_install = true,
     highlight = {
