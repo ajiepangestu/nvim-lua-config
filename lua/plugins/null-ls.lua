@@ -5,7 +5,7 @@ if not status_ok then
 end
 
 -- Code action
--- local code_actions = null_ls.builtins.code_actions
+local code_actions = null_ls.builtins.code_actions
 -- Diagnostic
 local diagnostics = null_ls.builtins.diagnostics
 -- Formatting
@@ -21,6 +21,11 @@ local sources = {
     },
     formatting.autopep8,
 
+    -- JavaScript, TypeScript
+    code_actions.eslint_d,
+    diagnostics.eslint_d,
+    formatting.prettier_standard,
+
     -- Spell Checker
     diagnostics.codespell,
 }
@@ -30,3 +35,4 @@ null_ls.setup({
     debug = true,
     update_in_insert = true
 })
+    
