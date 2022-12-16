@@ -10,9 +10,6 @@ mason_null_ls.setup {
         'pylint', -- linter
         'autopep8', -- formatter
 
-        -- JavaScript, TypeScript
-        'eslint', -- linter, formatter, code actions
-
         -- Spell Checker
         'codespell', -- linter
     }

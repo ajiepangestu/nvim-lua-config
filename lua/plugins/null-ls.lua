@@ -5,7 +5,7 @@ if not status_ok then
 end
 
 -- Code action
-local code_actions = null_ls.builtins.code_actions
+-- local code_actions = null_ls.builtins.code_actions
 -- Diagnostic
 local diagnostics = null_ls.builtins.diagnostics
 -- Formatting
@@ -20,17 +20,6 @@ local sources = {
         }
     },
     formatting.autopep8,
-
-    -- JavaScript, TypeScript
-    code_actions.eslint.with {
-        prefer_local = 'node_modules/.bin'
-    },
-    diagnostics.eslint.with {
-        prefer_local = 'node_modules/.bin'
-    },
-    formatting.eslint.with {
-        prefer_local = 'node_modules/.bin'
-    },
 
     -- Spell Checker
     diagnostics.codespell,
