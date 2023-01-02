@@ -1,11 +1,3 @@
-local function map(mode, lhs, rhs, opts)
-    local options = { noremap = true, silent = true }
-    if opts then
-        options = vim.tbl_extend('force', options, opts)
-    end
-    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
-end
-
 -------------------------------------------------------------------
 -- Neovim
 -------------------------------------------------------------------
@@ -13,92 +5,73 @@ end
 vim.g.mapleader = ';'
 
 -- Disable arrow keys
-map('', '<up>', '<nop>')
-map('', '<down>', '<nop>')
-map('', '<left>', '<nop>')
-map('', '<right>', '<nop>')
+vim.keymap.set('', '<up>', '<nop>')
+vim.keymap.set('', '<down>', '<nop>')
+vim.keymap.set('', '<left>', '<nop>')
+vim.keymap.set('', '<right>', '<nop>')
 
 -- Map Esc to jj
-map('i', 'jj', '<Esc>')
+vim.keymap.set('i', 'jj', '<Esc>')
 
 -- Clear search highlighting
-map('n', '<leader>c', ':nohl<CR>')
+vim.keymap.set('n', '<leader>c', ':nohl<CR>')
 
 -- Split horizontal
-map('n', '<leader>[', '<C-w>v')
-map('n', '<leader>]', '<C-w>s')
+vim.keymap.set('n', '<leader>[', '<C-w>v')
+vim.keymap.set('n', '<leader>]', '<C-w>s')
 
 -- Move focus
-map('n', '<leader>h', '<C-w>h')
-map('n', '<leader>j', '<C-w>j')
-map('n', '<leader>k', '<C-w>k')
-map('n', '<leader>l', '<C-w>l')
+vim.keymap.set('n', '<leader>h', '<C-w>h')
+vim.keymap.set('n', '<leader>j', '<C-w>j')
+vim.keymap.set('n', '<leader>k', '<C-w>k')
+vim.keymap.set('n', '<leader>l', '<C-w>l')
 
 -- Save
-map('n', '<leader>w', ':w<CR>')
-map('i', '<leader>w', '<C-c>:w<CR>')
+vim.keymap.set('n', '<leader>w', ':w<CR>')
+vim.keymap.set('i', '<leader>w', '<C-c>:w<CR>')
 
 -- Close NeoVIM
-map('n', '<leader>q', ':qa!<CR>')
+vim.keymap.set('n', '<leader>q', ':qa!<CR>')
 
 
 -------------------------------------------------------------------
 -- Plugin Configurations
 -------------------------------------------------------------------
 -- Nvim Tree
-map('n', '<C-e>', ':NvimTreeToggle<CR>')
-map('n', '<leader>e', ':NvimTreeFocus<CR>')
+vim.keymap.set('n', '<C-e>', ':NvimTreeToggle<CR>')
+vim.keymap.set('n', '<leader>e', ':NvimTreeFocus<CR>')
 
 -- Bufferline
-map('n', '<leader>p', ':bp<CR>') -- Goto previous tab
-map('n', '<leader>n', ':bn<CR>') -- Goto next tab
-map('n', '<leader>d', ':bd<CR>') -- Close tab
+vim.keymap.set('n', '<leader>p', ':bp<CR>') -- Goto previous tab
+vim.keymap.set('n', '<leader>n', ':bn<CR>') -- Goto next tab
+vim.keymap.set('n', '<leader>d', ':bd<CR>') -- Close tab
 
 -- File Finder
-map('n', '<leader>ff', ':Telescope find_files hidden=true<CR>')
-map('n', '<leader>fg', ':Telescope live_grep<CR>')
-map('n', '<leader>fb', ':Telescope file_browser<CR>')
-map('n', '<leader>fp', ':Telescope projects<CR>')
+vim.keymap.set('n', '<leader>ff', ':Telescope find_files hidden=true<CR>')
+vim.keymap.set('n', '<leader>fg', ':Telescope live_grep<CR>')
+vim.keymap.set('n', '<leader>fb', ':Telescope file_browser<CR>')
+vim.keymap.set('n', '<leader>fp', ':Telescope projects<CR>')
 
 -- Terminal
-map('n', '<leader>t', ':ToggleTerm<CR>')
-map('t', '<leader>t', [[<C-\><C-n>]])
+vim.keymap.set('n', '<leader>t', ':ToggleTerm<CR>')
+vim.keymap.set('t', '<leader>t', [[<C-\><C-n>]])
 
 -- Terminal Window
-map('t', '<leader>j', [[<Cmd>wincmd j<CR>]])
-map('t', '<leader>k', [[<Cmd>wincmd k<CR>]])
-map('t', '<leader>l', [[<Cmd>wincmd l<CR>]])
-map('t', '<leader>h', [[<Cmd>wincmd h<CR>]])
+vim.keymap.set('t', '<leader>j', [[<Cmd>wincmd j<CR>]])
+vim.keymap.set('t', '<leader>k', [[<Cmd>wincmd k<CR>]])
+vim.keymap.set('t', '<leader>l', [[<Cmd>wincmd l<CR>]])
+vim.keymap.set('t', '<leader>h', [[<Cmd>wincmd h<CR>]])
 
 -- Lazy git
 function LAZYGIT_TOGGLE()
     local lazygit = require('toggleterm.terminal').Terminal:new({ cmd = 'lazygit', hidden = true })
     lazygit:toggle()
 end
-
-map('n', '<leader>g', '<cmd>lua LAZYGIT_TOGGLE()<CR>')
-
-local KEYMAPS = {}
+vim.keymap.set('n', '<leader>g', '<cmd>lua LAZYGIT_TOGGLE()<CR>')
 
 -- LSP Config
-local opts = { noremap = true, silent = true }
-vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts) -- Show error inline
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts) -- Go to next error
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts) -- Go to previous error
-vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts) -- Show all error in opened file
+vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, { noremap = true, silent = true }) -- Show error inline
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { noremap = true, silent = true }) -- Go to next error
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { noremap = true, silent = true }) -- Go to previous error
+vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, { noremap = true, silent = true }) -- Show all error in opened file
 
-KEYMAPS.lsp_on_attach = function(_, bufnr)
-    local buffopts = { noremap = true, silent = true, buffer = bufnr }
-    vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, buffopts) -- Create new directory
-    vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, buffopts) -- Remove directory
-    vim.keymap.set('n', 'K', vim.lsp.buf.hover, buffopts) -- Show documentation
-    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, buffopts) -- Goto definition, <C-o> go back
-    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, buffopts) -- Goto declaration
-    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, buffopts) -- Goto implementation
-    vim.keymap.set('n', 'gr', vim.lsp.buf.references, buffopts) -- Goto references of variable
-    vim.keymap.set('n', '<space>r', vim.lsp.buf.rename, buffopts) -- Rename variable
-    vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, buffopts) -- Format Code
-    vim.keymap.set('n', '<space>a', vim.lsp.buf.code_action, buffopts) -- Code action
-end
-
-return KEYMAPS

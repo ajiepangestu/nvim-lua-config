@@ -3,7 +3,19 @@ if not status_ok then
     return
 end
 
-local on_attach = require('keymaps').lsp_on_attach
+local on_attach = function(_, bufnr)
+    local bufopts = { noremap = true, silent = true, buffer = bufnr }
+    vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts) -- Create new directory
+    vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts) -- Remove directory
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts) -- Show documentation
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts) -- Goto definition, <C-o> go back
+    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts) -- Goto declaration
+    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts) -- Goto implementation
+    vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts) -- Goto references of variable
+    vim.keymap.set('n', '<space>r', vim.lsp.buf.rename, bufopts) -- Rename variable
+    vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts) -- Format Code
+    vim.keymap.set('n', '<space>a', vim.lsp.buf.code_action, bufopts) -- Code action
+end
 
 local lsp_flags = {
     debounce_text_changes = 150,
