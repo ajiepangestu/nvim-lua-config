@@ -3,6 +3,9 @@ if not status_ok then
     return
 end
 
+-- Set Debug Log
+vim.lsp.set_log_level("debug")
+
 local on_attach = function(_, bufnr)
     local bufopts = { noremap = true, silent = true, buffer = bufnr }
     vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts) -- Create new directory
@@ -17,10 +20,10 @@ local on_attach = function(_, bufnr)
     vim.keymap.set('n', '<space>a', vim.lsp.buf.code_action, bufopts) -- Code action
 end
 
+-- Set debounce on change code
 local lsp_flags = {
-    debounce_text_changes = 150,
+    debounce_text_changes = 100,
 }
-
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- List of supported language server
@@ -38,7 +41,6 @@ local language_servers = {
     'intelephense', -- php
     'omnisharp' -- c#
 }
-
 for _, language_server in pairs(language_servers) do
     lspconfig[language_server].setup {
         flags = lsp_flags,
@@ -68,7 +70,6 @@ local signs = {
     Hint = ' ',
     Info = ' '
 }
-
 for type, icon in pairs(signs) do
     local hl = 'DiagnosticSign' .. type
     vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = '' })
