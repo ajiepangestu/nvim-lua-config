@@ -39,7 +39,9 @@ local language_servers = {
     'tsserver', -- typescript
     'vuels', -- vue
     'intelephense', -- php
-    'omnisharp' -- c#
+    'omnisharp', -- c#
+    'tailwindcss', -- tailwind css
+    'emmet_ls', -- emmet
 }
 for _, language_server in pairs(language_servers) do
     lspconfig[language_server].setup {
