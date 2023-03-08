@@ -52,7 +52,7 @@ for _, language_server in pairs(language_servers) do
 end
 
 -- Lua language server
-lspconfig['sumneko_lua'].setup {
+lspconfig['lua_ls'].setup {
     flags = lsp_flags,
     on_attach = on_attach,
     capabilities = capabilities,

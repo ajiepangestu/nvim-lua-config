@@ -9,7 +9,7 @@ mason_lspconfig.setup {
         'bashls', -- bash
         'html', -- html
         'cssls', -- css
-        'sumneko_lua', -- lua
+        'lua_ls', -- lua
         'yamlls', -- lua
         'jsonls', -- json with comment
         'marksman', -- markdown

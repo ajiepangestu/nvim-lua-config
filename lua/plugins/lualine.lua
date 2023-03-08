@@ -14,7 +14,7 @@ lualine.setup {
         lualine_b = {
             'branch',
             'diff',
-            { 'diagnostics', sources = { 'coc' } }
+            { 'diagnostics', sources = { 'nvim_lsp' } }
         },
         lualine_c = {
             {
