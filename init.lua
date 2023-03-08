@@ -5,7 +5,6 @@ require('colors')
 
 -- Plugins
 require('plugins/packer')
-require('plugins/bufferline')
 require('plugins/lualine')
 require('plugins/mason')
 require('plugins/mason-lspconfig')
@@ -25,4 +24,5 @@ require('plugins/project')
 require('plugins/telescope')
 require('plugins/toggleterm')
 require('plugins/vim-multi-cursor')
+require('plugins/barbecue')
 

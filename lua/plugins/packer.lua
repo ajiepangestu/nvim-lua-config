@@ -54,9 +54,6 @@ return require('packer').startup(function(use)
     -- Statusline
     use 'nvim-lualine/lualine.nvim'
 
-    -- Bufferline
-    use { 'akinsho/bufferline.nvim', tag = 'v2.*' }
-
     -- Plenary
     use 'nvim-lua/plenary.nvim'
 
@@ -89,6 +86,15 @@ return require('packer').startup(function(use)
 
     -- Terminal Toggle
     use { 'akinsho/toggleterm.nvim', tag = '*' }
+
+    -- Barbecue
+    use {
+        "utilyre/barbecue.nvim",
+        tag = "*",
+        requires = {
+            "SmiteshP/nvim-navic"
+        }
+    }
 
     -- Search and replace
     use 's1n7ax/nvim-search-and-replace'
