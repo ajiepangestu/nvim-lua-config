@@ -15,11 +15,14 @@ nvim_tree.setup {
         update_cwd = true,
     },
     renderer = {
-        highlight_opened_files = 'all',
+        highlight_git = true,
         indent_markers = {
             enable = true,
             inline_arrows = false,
         },
+    },
+    diagnostics = {
+        enable = true
     },
     view = {
         adaptive_size = true
