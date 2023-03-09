@@ -6,25 +6,55 @@ end
 
 lualine.setup {
     options = {
-        component_separators = { left = '', right = '' },
-        section_separators = { left = '', right = '' },
+        component_separators = {
+            left = '',
+            right = ''
+        },
+        section_separators = {
+            left = '',
+            right = ''
+        },
     },
     sections = {
-        lualine_a = { 'mode' },
+        lualine_a = {
+            {
+                'mode',
+                separator = {
+                    left = '',
+                    right = '',
+                },
+            },
+        },
         lualine_b = {
             'branch',
             'diff',
-            { 'diagnostics', sources = { 'nvim_lsp' } }
         },
         lualine_c = {
+            {
+                'diagnostics',
+                sources = {
+                    'nvim_lsp'
+                }
+            },
             {
                 'filename',
                 path = 1
             }
         },
-        lualine_x = { 'filetype' },
-        lualine_y = { 'progress' },
-        lualine_z = { 'location' }
+        lualine_x = {},
+        lualine_y = {
+            'progress',
+            'location',
+        },
+        lualine_z = {
+            {
+                'filetype',
+                separator = {
+                    left = '',
+                    right = '',
+                },
+            }
+        }
     },
     inactive_sections = {
         lualine_a = {},
