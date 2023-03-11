@@ -3,26 +3,31 @@ require('keymaps')
 require('options')
 require('colors')
 
--- Plugins
-require('plugins/packer')
-require('plugins/lualine')
-require('plugins/mason')
-require('plugins/mason-lspconfig')
-require('plugins/mason-null-ls')
-require('plugins/null-ls')
-require('plugins/gitsigns')
-require('plugins/indent-blankline')
-require('plugins/nvim-autopairs')
-require('plugins/nvim-colorizer')
-require('plugins/nvim-comment')
-require('plugins/nvim-lspconfig')
-require('plugins/nvim-scrollbar')
-require('plugins/nvim-search-and-replace')
-require('plugins/nvim-tree')
-require('plugins/nvim-treesitter')
-require('plugins/project')
-require('plugins/telescope')
-require('plugins/toggleterm')
-require('plugins/vim-multi-cursor')
-require('plugins/barbecue')
+-- Base Plugins
+require('plugins/packer') -- Plugin Manager
+require('plugins/lualine') -- Statusbar
+require('plugins/nvim-tree') -- File Manager
+require('plugins/nvim-treesitter') -- Syntax Highlighting
+
+-- Dev Plugins
+require('plugins/mason') -- Package Manager
+require('plugins/mason-lspconfig') -- LSP Config Package Manager
+require('plugins/mason-null-ls') -- LSP Additional Formatter
+require('plugins/nvim-cmp') -- Autocomplete Engine
+require('plugins/null-ls') -- LSP Additional Formatter Engine
+require('plugins/nvim-lspconfig') -- LSP Config
+
+-- Additional Plugins
+require('plugins/gitsigns') -- Git commit
+require('plugins/indent-blankline') -- Indent line
+require('plugins/nvim-autopairs') -- Auto close tag
+require('plugins/nvim-colorizer') -- Display color code
+require('plugins/nvim-comment') -- Comment code
+require('plugins/nvim-scrollbar') -- Scrollbar
+require('plugins/nvim-search-and-replace') -- Global search and replace
+require('plugins/project') -- Project Manager
+require('plugins/telescope') -- File Finder
+require('plugins/toggleterm') -- Floating Terminal
+require('plugins/vim-multi-cursor') -- Multi select
+require('plugins/barbecue') -- Outline context
 
