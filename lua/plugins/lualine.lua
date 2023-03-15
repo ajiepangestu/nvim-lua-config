@@ -35,10 +35,6 @@ lualine.setup {
                 sources = {
                     'nvim_lsp'
                 }
-            },
-            {
-                'filename',
-                path = 1
             }
         },
         lualine_x = {},

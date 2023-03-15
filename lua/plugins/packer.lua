@@ -18,8 +18,8 @@ return require('packer').startup(function(use)
     -- Packer Plugin Manager
     use 'wbthomason/packer.nvim'
 
-    -- One Dark Theme
-    use 'navarasu/onedark.nvim'
+    -- Monokai Pro Theme
+    use 'loctvl842/monokai-pro.nvim'
 
     -- File Manager
     use 'nvim-tree/nvim-tree.lua'

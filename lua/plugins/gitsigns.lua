@@ -12,4 +12,9 @@ gitsigns.setup {
         delay = 750,
         ignore_whitespace = false,
     },
+    signs = {
+        add = { text = '+' },
+        delete = { text = '-' },
+        change = { text = '~' }
+    }
 }
