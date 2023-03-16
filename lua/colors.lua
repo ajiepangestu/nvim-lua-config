@@ -4,5 +4,7 @@ if not status_ok then
     return
 end
 
-monokai_pro.setup {}
+monokai_pro.setup {
+    filter = 'spectrum'
+}
 vim.cmd([[colorscheme monokai-pro]])
