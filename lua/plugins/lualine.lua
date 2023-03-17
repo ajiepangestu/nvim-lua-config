@@ -28,9 +28,6 @@ lualine.setup {
         lualine_b = {
             {
                 'branch',
-                separator = {
-                    right = ''
-                }
             },
             'diff',
         },
