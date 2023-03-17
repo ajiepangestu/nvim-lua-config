@@ -7,12 +7,12 @@ end
 lualine.setup {
     options = {
         component_separators = {
-            left = '',
-            right = ''
+            left = '',
+            right = ''
         },
         section_separators = {
-            left = '',
-            right = ''
+            left = '',
+            right = ''
         },
     },
     sections = {
@@ -20,13 +20,18 @@ lualine.setup {
             {
                 'mode',
                 separator = {
-                    left = '',
-                    right = '',
+                    left = '',
+                    right = ''
                 },
             },
         },
         lualine_b = {
-            'branch',
+            {
+                'branch',
+                separator = {
+                    right = ''
+                }
+            },
             'diff',
         },
         lualine_c = {
@@ -45,8 +50,7 @@ lualine.setup {
             {
                 'filetype',
                 separator = {
-                    left = '',
-                    right = '',
+                    left = ''
                 },
             }
         }
