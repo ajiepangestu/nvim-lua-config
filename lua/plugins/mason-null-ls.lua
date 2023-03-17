@@ -12,7 +12,7 @@ mason_null_ls.setup {
 
         -- JavaScript
         'eslint_d', -- code actions
-        'prettier_standard', -- formatter
+        'prettier', -- formatter
 
         -- Spell Checker
         'codespell', -- linter

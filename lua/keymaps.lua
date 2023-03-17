@@ -75,3 +75,6 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { noremap = true, silent = t
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { noremap = true, silent = true }) -- Go to previous error
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, { noremap = true, silent = true }) -- Show all error in opened file
 
+-- Search box
+vim.keymap.set('n', '<leader>s', ':SearchBoxIncSearch<CR>')
+
