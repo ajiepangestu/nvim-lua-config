@@ -80,7 +80,7 @@ return require('packer').startup(function(use)
     -- Barbecue
     use {
         "utilyre/barbecue.nvim",
-        tag = "*",
+        branch = "fix/E36",
         requires = {
             "SmiteshP/nvim-navic"
         }
