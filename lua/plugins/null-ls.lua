@@ -24,7 +24,7 @@ local sources = {
     -- JavaScript, TypeScript
     code_actions.eslint_d,
     diagnostics.eslint_d,
-    formatting.prettier_standard,
+    formatting.prettier,
 
     -- Spell Checker
     diagnostics.codespell,
