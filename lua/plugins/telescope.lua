@@ -7,9 +7,9 @@ end
 telescope.setup {
     defaults = {
         file_ignore_patterns = {
-            '.git', -- git folder
+            '.git',         -- git folder
             'node_modules', -- nodejs libs
-            '.venv' -- python environment
+            '.venv'         -- python environment
         }
     }
 }

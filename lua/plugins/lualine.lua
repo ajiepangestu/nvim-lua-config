@@ -31,7 +31,7 @@ lualine.setup {
                 }
             }
         },
-        lualine_x = {'filename'},
+        lualine_x = { 'filename' },
         lualine_y = {
             'progress'
         },

@@ -7,7 +7,7 @@ end
 mason_null_ls.setup {
     ensure_installed = {
         -- Python
-        'pylint', -- linter
+        'pylint',   -- linter
         'autopep8', -- formatter
 
         -- JavaScript

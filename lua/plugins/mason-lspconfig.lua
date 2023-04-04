@@ -6,20 +6,20 @@ end
 
 mason_lspconfig.setup {
     ensure_installed = {
-        'bashls', -- bash
-        'html', -- html
-        'cssls', -- css
-        'lua_ls', -- lua
-        'yamlls', -- lua
-        'jsonls', -- json with comment
-        'marksman', -- markdown
-        'eslint', -- javascript
-        'pyright', -- python
-        'tsserver', -- typescript
-        'vuels', -- vue
+        'bashls',       -- bash
+        'html',         -- html
+        'cssls',        -- css
+        'lua_ls',       -- lua
+        'yamlls',       -- lua
+        'jsonls',       -- json with comment
+        'marksman',     -- markdown
+        'eslint',       -- javascript
+        'pyright',      -- python
+        'tsserver',     -- typescript
+        'vuels',        -- vue
         'intelephense', -- php
-        'omnisharp', -- c#
-        'tailwindcss', -- tailwind css
-        'emmet_ls', -- emmet
+        'omnisharp',    -- c#
+        'tailwindcss',  -- tailwind css
+        'emmet_ls',     -- emmet
     }
 }
