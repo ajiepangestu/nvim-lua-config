@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 -- Set Debug Log
--- vim.lsp.set_log_level("debug")
+vim.lsp.set_log_level("off")
 
 local on_attach = function(_, bufnr)
     local bufopts = { noremap = true, silent = true, buffer = bufnr }
