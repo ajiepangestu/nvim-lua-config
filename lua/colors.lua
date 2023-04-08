@@ -1,10 +1,10 @@
 -- Monokai Pro Theme
-local status_ok, monokai_pro = pcall(require, 'monokai-pro')
+local status_ok, _ = pcall(require, 'monokaipro')
 if not status_ok then
     return
 end
 
-monokai_pro.setup {
-    filter = 'spectrum'
-}
-vim.cmd([[colorscheme monokai-pro]])
+vim.g.monokaipro_filter = 'spectrum'
+vim.g.monokaipro_italic_functions = true
+vim.g.monokaipro_flat_term = true
+vim.cmd [[colorscheme monokaipro]]

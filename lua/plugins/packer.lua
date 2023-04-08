@@ -19,7 +19,10 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Monokai Pro Theme
-    use 'loctvl842/monokai-pro.nvim'
+    use {
+        'https://gitlab.com/__tpb/monokai-pro.nvim',
+        as = 'monokai-pro.nvim'
+    }
 
     -- File Manager
     use 'nvim-tree/nvim-tree.lua'
@@ -80,7 +83,6 @@ return require('packer').startup(function(use)
     -- Barbecue
     use {
         "utilyre/barbecue.nvim",
-        branch = "fix/E36",
         requires = {
             "SmiteshP/nvim-navic"
         }
