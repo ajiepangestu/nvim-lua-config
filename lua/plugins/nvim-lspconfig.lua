@@ -34,7 +34,6 @@ local language_servers = {
     'yamlls',       -- yaml
     'jsonls',       -- json with comment
     'marksman',     -- markdown
-    'pyright',      -- python
     'eslint',       -- javascript
     'tsserver',     -- typescript
     'vuels',        -- vue
@@ -50,6 +49,23 @@ for _, language_server in pairs(language_servers) do
         capabilities = capabilities
     }
 end
+
+-- Python language server
+lspconfig['pyright'].setup {
+    flags = lsp_flags,
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = {
+        python = {
+            analysis = {
+                autoSearchPaths = true,
+                diagnosticMode = "workspace",
+                useLibraryCodeForTypes = true
+            }
+        }
+
+    }
+}
 
 -- Lua language server
 lspconfig['lua_ls'].setup {
