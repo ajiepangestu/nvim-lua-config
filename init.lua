@@ -1,22 +1,14 @@
 -- General
-require('keymaps')
-require('options')
-require('colors')
-
+require('keymaps')                         -- Keymaps Configurations
+require('options')                         -- Neovim Configurations
+require('colors')                          -- Theme
 -- Base Plugins
-require('plugins/packer')          -- Plugin Manager
-require('plugins/lualine')         -- Statusbar
-require('plugins/nvim-tree')       -- File Manager
-require('plugins/nvim-treesitter') -- Syntax Highlighting
-
+require('plugins/packer')                  -- Plugin Manager
+require('plugins/lualine')                 -- Statusbar
+require('plugins/nvim-tree')               -- File Manager
+require('plugins/nvim-treesitter')         -- Syntax Highlighting
 -- Dev Plugins
-require('plugins/mason')           -- Package Manager
-require('plugins/mason-lspconfig') -- LSP Config Package Manager
-require('plugins/mason-null-ls')   -- LSP Additional Formatter
-require('plugins/nvim-cmp')        -- Autocomplete Engine
-require('plugins/null-ls')         -- LSP Additional Formatter Engine
-require('plugins/nvim-lspconfig')  -- LSP Config
-
+require('plugins/coc')                     -- COC
 -- Additional Plugins
 require('plugins/gitsigns')                -- Git commit
 require('plugins/indent-blankline')        -- Indent line
