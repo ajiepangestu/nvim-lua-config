@@ -16,10 +16,7 @@ vim.g.coc_global_extensions = {
     'coc-lua'
 }
 
-local opts = {
-    silent = true,
-    nowait = true
-}
+local opts = { silent = true, nowait = true }
 
 -- COC code navigation
 vim.keymap.set("n", "gd", "<Plug>(coc-definition)", opts)
@@ -79,8 +76,7 @@ opts = {
     replace_keycodes = false
 }
 
-vim.keymap.set("i", "<c-j>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()',
-    opts)
+vim.keymap.set("i", "<c-j>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
 vim.keymap.set("i", "<c-k>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 vim.keymap.set("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
 
