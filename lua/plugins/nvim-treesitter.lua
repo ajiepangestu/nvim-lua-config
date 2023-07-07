@@ -14,6 +14,7 @@ nvim_treesitter.setup {
         'scss',
         'lua',
         'yaml',
+        'json',
         'jsonc',
         'markdown',
         'python',
