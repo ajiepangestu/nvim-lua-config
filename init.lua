@@ -10,6 +10,7 @@ require('plugins/nvim-treesitter')         -- Syntax Highlighting
 -- Dev Plugins
 require('plugins/coc')                     -- COC
 -- Additional Plugins
+require('plugins/nvim-ts-autotag')         -- Autotag
 require('plugins/gitsigns')                -- Git commit
 require('plugins/indent-blankline')        -- Indent line
 require('plugins/nvim-autopairs')          -- Auto close tag
