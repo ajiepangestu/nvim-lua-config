@@ -26,7 +26,7 @@ nvim_treesitter.setup {
         'cpp',
         'c'
     },
-    sync_install = true,
+    sync_install = false,
     highlight = {
         enable = true,
     },
