@@ -1,5 +1,6 @@
 local g = vim.g
 local opt = vim.opt
+local fn = vim.fn
 
 -- General Configurations
 opt.mouse = 'a'                           -- Enable mouse support
@@ -26,6 +27,21 @@ opt.lazyredraw = true                     -- Faster scrolling
 opt.undodir = '~/.nvim/data/backup'       -- Undo directory
 opt.encoding = 'UTF-8'                    -- Encoding
 opt.shortmess:append 'sI'                 -- Disable NeoVIM Intro
+
+if fn.has('wsl') then
+    g.clipboard = {
+        name = 'WslClipboard',
+        copy = {
+            ['+'] = 'clip.exe',
+            ['*'] = 'clip.exe',
+        },
+        paste = {
+            ['+'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+            ['*'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+        },
+        cache_enabled = 0,
+    }
+end
 
 -- Disable builtin plugins
 local plugins = {
