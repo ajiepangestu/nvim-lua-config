@@ -28,7 +28,7 @@ opt.undodir = '~/.nvim/data/backup'       -- Undo directory
 opt.encoding = 'UTF-8'                    -- Encoding
 opt.shortmess:append 'sI'                 -- Disable NeoVIM Intro
 
-if fn.has('wsl') then
+if fn.has('wsl') ~= 0 then
     g.clipboard = {
         name = 'WslClipboard',
         copy = {
