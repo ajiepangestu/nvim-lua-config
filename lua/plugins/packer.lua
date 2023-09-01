@@ -62,7 +62,7 @@ return require('packer').startup(function(use)
     use {'neoclide/coc.nvim', branch = 'release'}
 
     -- Git Commit Label
-    use { 'lewis6991/gitsigns.nvim', tag = 'release' }
+    use { 'lewis6991/gitsigns.nvim', branch = 'release' }
 
     -- Terminal Toggle
     use { 'akinsho/toggleterm.nvim', tag = '*' }
