@@ -13,7 +13,8 @@ vim.g.coc_global_extensions = {
     'coc-json',
     'coc-phpls',
     'coc-pyright',
-    'coc-lua'
+    'coc-lua',
+    'coc-clangd'
 }
 
 local opts = { silent = true, nowait = true }
