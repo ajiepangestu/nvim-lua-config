@@ -67,11 +67,11 @@ return require('packer').startup(function(use)
     -- LSP config
     use 'neovim/nvim-lspconfig'
 
-    -- Formatter and Linter
-    use 'jose-elias-alvarez/null-ls.nvim'
+    -- Formatter and Linter Package Manager
+    use 'jayp0521/mason-null-ls.nvim'
 
     -- Formatter and Linter
-    use 'jayp0521/mason-null-ls.nvim'
+    use 'jose-elias-alvarez/null-ls.nvim'
 
     -- Auto Complete
     use {
