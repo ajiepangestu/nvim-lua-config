@@ -58,8 +58,20 @@ return require('packer').startup(function(use)
     -- Comment
     use 'terrortylor/nvim-comment'
 
-    -- LSP
+    -- Package Manager
+    use 'williamboman/mason.nvim'
+
+    -- LSP Package Manager
+    use 'williamboman/mason-lspconfig.nvim'
+
+    -- LSP config
     use 'neovim/nvim-lspconfig'
+
+    -- Formatter and Linter Package Manager
+    use 'jayp0521/mason-null-ls.nvim'
+
+    -- Formatter and Linter
+    use 'jose-elias-alvarez/null-ls.nvim'
 
     -- Auto Complete
     use {
@@ -75,7 +87,7 @@ return require('packer').startup(function(use)
     }
 
     -- Git Commit Label
-    use { 'lewis6991/gitsigns.nvim', tag = 'release' }
+    use { 'lewis6991/gitsigns.nvim', branch = 'release' }
 
     -- Terminal Toggle
     use { 'akinsho/toggleterm.nvim', tag = '*' }
@@ -90,21 +102,6 @@ return require('packer').startup(function(use)
 
     -- Search and replace
     use 's1n7ax/nvim-search-and-replace'
-
-    -- Autotag
-    use "windwp/nvim-ts-autotag"
-
-    -- Formatter and Linter
-    use 'jose-elias-alvarez/null-ls.nvim'
-
-    -- Package Manager
-    use 'williamboman/mason.nvim'
-
-    -- LSP Package Manager
-    use 'williamboman/mason-lspconfig.nvim'
-
-    -- Formatter and Linter
-    use 'jayp0521/mason-null-ls.nvim'
 
     -- Editory Config
     use 'gpanders/editorconfig.nvim'
