@@ -5,10 +5,11 @@ require('colors')  -- Theme
 -- -------------------------------------------------------------------
 
 -- Base Plugins ------------------------------------------------------
-require('plugins/packer')          -- Plugin Manager
-require('plugins/lualine')         -- Statusbar
-require('plugins/nvim-tree')       -- File Manager
-require('plugins/nvim-treesitter') -- Syntax Highlighting
+require('plugins/packer')                  -- Plugin Manager
+require('plugins/lualine')                 -- Statusbar
+require('plugins/nvim-tree')               -- File Manager
+require('plugins/nvim-treesitter')         -- Syntax Highlighting
+require('plugins/nvim-treesitter-context') -- Current Context Identifier
 -- -------------------------------------------------------------------
 
 -- Dev Plugins -------------------------------------------------------

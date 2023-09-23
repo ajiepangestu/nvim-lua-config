@@ -13,6 +13,9 @@ vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine]]
 
 indent_blankline.setup {
     show_current_context = true,
+    show_current_context_start = true,
+    show_first_indent_level = true,
+    show_trailing_blankline_indent = false,
     filetype_exclude = {
         'lspinfo',
         'packer',
@@ -24,6 +27,9 @@ indent_blankline.setup {
         'markdown',
         'text',
         'terminal',
+        'TelescopePrompt',
+        'TelescopeResult',
+        'lazy'
     },
     buftype_exclude = {
         'terminal',

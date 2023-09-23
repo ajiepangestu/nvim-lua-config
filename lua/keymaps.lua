@@ -71,10 +71,16 @@ end
 vim.keymap.set('n', '<leader>g', '<cmd>lua LAZYGIT_TOGGLE()<CR>')
 
 -- LSP Config
-vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, { noremap = true, silent = true }) -- Show error inline
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { noremap = true, silent = true })        -- Go to next error
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { noremap = true, silent = true })        -- Go to previous error
-vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, { noremap = true, silent = true }) -- Show all error in opened file
+-- vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, { noremap = true, silent = true }) -- Show error inline
+-- vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { noremap = true, silent = true })        -- Go to next error
+-- vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { noremap = true, silent = true })        -- Go to previous error
+-- vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, { noremap = true, silent = true }) -- Show all error in opened file
 
 -- Search box
 vim.keymap.set('n', '<leader>s', ':SearchBoxIncSearch<CR>')
+
+-- Treesitter Context
+vim.keymap.set("n", "[c", function()
+  require("treesitter-context").go_to_context()
+end, { silent = true })
+

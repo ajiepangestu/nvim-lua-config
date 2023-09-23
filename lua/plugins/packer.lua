@@ -45,6 +45,9 @@ return require('packer').startup(function(use)
     -- Treesitter (Syntax Highlighting)
     use 'nvim-treesitter/nvim-treesitter'
 
+    -- Show Current Context
+    use 'nvim-treesitter/nvim-treesitter-context'
+
     -- Colorizer
     use 'norcalli/nvim-colorizer.lua'
 
