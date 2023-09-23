@@ -1,16 +1,16 @@
 -- General
-require('keymaps')                         -- Keymaps Configurations
-require('options')                         -- Neovim Configurations
-require('colors')                          -- Theme
+require('keymaps') -- Keymaps Configurations
+require('options') -- Neovim Configurations
+require('colors')  -- Theme
 
 -- Base Plugins
-require('plugins/packer')                  -- Plugin Manager
-require('plugins/lualine')                 -- Statusbar
-require('plugins/nvim-tree')               -- File Manager
-require('plugins/nvim-treesitter')         -- Syntax Highlighting
+require('plugins/packer')          -- Plugin Manager
+require('plugins/lualine')         -- Statusbar
+require('plugins/nvim-tree')       -- File Manager
+require('plugins/nvim-treesitter') -- Syntax Highlighting
+
 -- Dev Plugins
-require('plugins/coc')                     -- COC
-require('plugins/nvim-ts-autotag')         -- Autotag
+require('plugins/coc') -- COC
 -- require('plugins/mason')                   -- Package manager
 -- require('plugins/mason-lspconfig')         -- LSP config package manager
 -- require('plugins/mason-null-ls')           -- LSP config package manager
