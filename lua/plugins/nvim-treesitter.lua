@@ -1,10 +1,10 @@
 -- Treesitter (Syntax Highlighting)
-local status_ok, nvim_treesitter = pcall(require, 'nvim-treesitter.configs')
+local status_ok, nvim_treesitter = pcall(require, 'nvim-treesitter')
 if not status_ok then
     return
 end
 
-nvim_treesitter.setup {
+require('nvim-treesitter.configs').setup {
     ensure_installed = {
         'bash',
         'make',
@@ -34,6 +34,6 @@ nvim_treesitter.setup {
         enable = true,
     },
     autotag = {
-        enable = true,
+        enable = true
     }
 }
