@@ -49,6 +49,7 @@ vim.keymap.set("n", "<space>f", "<Plug>(coc-format-selected)", opts)
 -- Code Actions
 vim.keymap.set("x", "<space>a", "<Plug>(coc-codeaction-selected)", opts)
 vim.keymap.set("n", "<space>a", "<Plug>(coc-codeaction-selected)", opts)
+vim.keymap.set("n", "<space>ac", "Plug>(coc-codeaction-cursor)", opts)
 
 -- Show all diagnostics
 vim.keymap.set("n", "<space>e", ":<C-u>CocList diagnostics<cr>", opts)
