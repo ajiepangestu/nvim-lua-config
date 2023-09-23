@@ -64,8 +64,14 @@ return require('packer').startup(function(use)
     -- LSP Package Manager
     use 'williamboman/mason-lspconfig.nvim'
 
-    -- LSP
+    -- LSP config
     use 'neovim/nvim-lspconfig'
+
+    -- Formatter and Linter
+    use 'jose-elias-alvarez/null-ls.nvim'
+
+    -- Formatter and Linter
+    use 'jayp0521/mason-null-ls.nvim'
 
     -- Auto Complete
     use {
