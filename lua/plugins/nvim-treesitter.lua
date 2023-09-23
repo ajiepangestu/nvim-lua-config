@@ -32,5 +32,8 @@ nvim_treesitter.setup {
     },
     indent = {
         enable = true,
+    },
+    autotag = {
+        enable = true,
     }
 }
