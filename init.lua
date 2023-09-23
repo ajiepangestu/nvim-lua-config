@@ -11,6 +11,7 @@ require('plugins/nvim-treesitter')         -- Syntax Highlighting
 require('plugins/mason')                   -- Package manager
 require('plugins/mason-lspconfig')         -- LSP config package manager
 require('plugins/nvim-lspconfig')          -- LSP Config
+require('plugins/nvim-cmp')                -- Auto complete
 -- Additional Plugins
 require('plugins/nvim-ts-autotag')         -- Autotag
 require('plugins/gitsigns')                -- Git commit
