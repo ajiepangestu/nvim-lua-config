@@ -8,7 +8,9 @@ require('plugins/lualine')                 -- Statusbar
 require('plugins/nvim-tree')               -- File Manager
 require('plugins/nvim-treesitter')         -- Syntax Highlighting
 -- Dev Plugins
-require('plugins/coc')                     -- COC
+require('plugins/mason')                   -- Package manager
+require('plugins/mason-lspconfig')         -- LSP config package manager
+require('plugins/nvim-lspconfig')          -- LSP Config
 -- Additional Plugins
 require('plugins/nvim-ts-autotag')         -- Autotag
 require('plugins/gitsigns')                -- Git commit
