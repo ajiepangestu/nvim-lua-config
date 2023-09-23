@@ -17,7 +17,8 @@ lualine.setup {
             {
                 'diagnostics',
                 sources = {
-                    'nvim_lsp'
+                    'coc'
+                    -- 'nvim_lsp'
                 }
             }
         },
