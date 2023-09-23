@@ -10,9 +10,9 @@ require('plugins/nvim-treesitter')         -- Syntax Highlighting
 -- Dev Plugins
 require('plugins/mason')                   -- Package manager
 require('plugins/mason-lspconfig')         -- LSP config package manager
-require('plugins/mason-null-ls')         -- LSP config package manager
+require('plugins/mason-null-ls')           -- LSP config package manager
 require('plugins/nvim-lspconfig')          -- LSP config
-require('plugins/null-ls')         -- LSP config package manager
+require('plugins/null-ls')                 -- LSP config package manager
 require('plugins/nvim-cmp')                -- Auto complete
 -- Additional Plugins
 require('plugins/gitsigns')                -- Git commit
