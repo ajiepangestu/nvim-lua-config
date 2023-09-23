@@ -17,13 +17,11 @@ vim.g.coc_global_extensions = {
     'coc-clangd'
 }
 
-local opts = { silent = true, nowait = true }
-
 -- COC code navigation
-vim.keymap.set("n", "gd", "<Plug>(coc-definition)", opts)
-vim.keymap.set("n", "gy", "<Plug>(coc-type-definition)", opts)
-vim.keymap.set("n", "gi", "<Plug>(coc-implementation)", opts)
-vim.keymap.set("n", "gr", "<Plug>(coc-references)", opts)
+vim.keymap.set("n", "gd", "<Plug>(coc-definition)", { silent = true })
+vim.keymap.set("n", "gy", "<Plug>(coc-type-definition)", { silent = true })
+vim.keymap.set("n", "gi", "<Plug>(coc-implementation)", { silent = true })
+vim.keymap.set("n", "gr", "<Plug>(coc-references)", { silent = true })
 
 -- Show Documentation
 function _G.show_docs()
@@ -37,52 +35,47 @@ function _G.show_docs()
     end
 end
 
-vim.keymap.set("n", "K", '<CMD>lua _G.show_docs()<CR>', opts)
+vim.keymap.set("n", "K", '<CMD>lua _G.show_docs()<CR>', { silent = true })
 
 -- Symbol renaming
-vim.keymap.set("n", "<space>r", "<Plug>(coc-rename)", opts)
+vim.keymap.set("n", "<space>r", "<Plug>(coc-rename)", { silent = true })
 
 -- Formatting
-vim.keymap.set("x", "<space>f", "<Plug>(coc-format-selected)", opts)
-vim.keymap.set("n", "<space>f", "<Plug>(coc-format-selected)", opts)
+vim.keymap.set("x", "<space>f", "<Plug>(coc-format-selected)", { silent = true })
+vim.keymap.set("n", "<space>f", "<Plug>(coc-format-selected)", { silent = true })
 
 -- Code Actions
-vim.keymap.set("x", "<space>a", "<Plug>(coc-codeaction-selected)", opts)
-vim.keymap.set("n", "<space>a", "<Plug>(coc-codeaction-selected)", opts)
-vim.keymap.set("n", "<space>ac", "Plug>(coc-codeaction-cursor)", opts)
+vim.keymap.set("x", "<space>a", "<Plug>(coc-codeaction-selected)", { silent = true, nowait = true })
+vim.keymap.set("n", "<space>a", "<Plug>(coc-codeaction-selected)", { silent = true, nowait = true })
+vim.keymap.set("n", "<space>ac", "Plug>(coc-codeaction-cursor)", { silent = true, nowait = true })
 
 -- Show all diagnostics
-vim.keymap.set("n", "<space>e", ":<C-u>CocList diagnostics<cr>", opts)
-
+vim.keymap.set("n", "<space>e", ":<C-u>CocList diagnostics<cr>", { silent = true, nowait = true })
 -- Goto diagnostic
-vim.keymap.set("n", "[g", "<Plug>(coc-diagnostic-prev)", opts)
-vim.keymap.set("n", "]g", "<Plug>(coc-diagnostic-next)", opts)
+vim.keymap.set("n", "[g", "<Plug>(coc-diagnostic-prev)", { silent = true })
+vim.keymap.set("n", "]g", "<Plug>(coc-diagnostic-next)", { silent = true })
 
 -- Outline
-vim.keymap.set("n", "<space>o", ":<C-u>CocList outline<cr>", opts)
+vim.keymap.set("n", "<space>o", ":<C-u>CocList outline<cr>", { silent = true, nowait = true })
 
 -- Do default action for next item
-vim.keymap.set("n", "<space>j", ":<C-u>CocNext<cr>", opts)
+vim.keymap.set("n", "<space>j", ":<C-u>CocNext<cr>", { silent = true, nowait = true })
 
 -- Do default action for previous item
-vim.keymap.set("n", "<space>k", ":<C-u>CocPrev<cr>", opts)
+vim.keymap.set("n", "<space>k", ":<C-u>CocPrev<cr>", { silent = true, nowait = true })
 
 -- Resume latest coc list
-vim.keymap.set("n", "<space>p", ":<C-u>CocListResume<cr>", opts)
+vim.keymap.set("n", "<space>p", ":<C-u>CocListResume<cr>", { silent = true, nowait = true })
 
--- Auto Completion
-opts = {
-    silent = true,
-    noremap = true,
-    expr = true,
-    replace_keycodes = false
-}
 
 -- Autocomplete
 function _G.check_back_space()
     local col = vim.fn.col('.') - 1
     return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
 end
+
+-- Autocomplete Options
+local opts = { silent = true, noremap = true, expr = true, replace_keycodes = false }
 
 vim.keymap.set("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
 vim.keymap.set("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
