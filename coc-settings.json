@@ -18,5 +18,20 @@
         "reportUnboundVariable": "none",
         "reportOptionalSubscript": "none",
         "reportOptionalIterable": "none"
-    }
+    },
+    "cSpell.language": "en",
+    "cSpell.enabled": true,
+    "cSpell.showStatus": true,
+    "cSpell.ignorePaths": [
+        "node_modules",
+        "**/node_modules",
+        "**/node_modules/**",
+        "node_modules/**",
+        "vscode-extension",
+        ".venv/**",
+        "**/.virtualenvs/**",
+        ".git",
+        "*.dll",
+        "**/*.dll"
+    ]
 }

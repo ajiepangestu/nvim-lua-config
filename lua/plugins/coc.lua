@@ -14,7 +14,8 @@ vim.g.coc_global_extensions = {
     'coc-phpls',
     'coc-pyright',
     'coc-lua',
-    'coc-clangd'
+    'coc-clangd',
+    'coc-spell-checker'
 }
 
 -- COC code navigation
