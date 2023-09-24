@@ -2,6 +2,7 @@
     "Lua.diagnostics.globals": [
         "vim"
     ],
+    "diagnostic.virtualText": true,
     "diagnostic.warningSign": "",
     "diagnostic.errorSign": "",
     "diagnostic.infoSign": "",
