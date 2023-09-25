@@ -115,17 +115,11 @@ return require('packer').startup(function(use)
     -- Editory Config
     use 'gpanders/editorconfig.nvim'
 
-    -- Project Manager
-    use 'ahmedkhalf/project.nvim'
-
     -- Scrollbar
     use 'petertriho/nvim-scrollbar'
 
     -- UI Library
     use 'MunifTanjim/nui.nvim'
-
-    -- Search Box
-    use 'VonHeikemen/searchbox.nvim'
 
     -- Packer  Bootstrap
     if packer_bootstrap then

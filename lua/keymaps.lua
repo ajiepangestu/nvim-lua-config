@@ -50,7 +50,6 @@ vim.keymap.set('n', '<leader>d', ':bd<CR>') -- Close tab
 vim.keymap.set('n', '<leader>ff', ':Telescope find_files hidden=true<CR>')
 vim.keymap.set('n', '<leader>fg', ':Telescope live_grep<CR>')
 vim.keymap.set('n', '<leader>fb', ':Telescope file_browser<CR>')
-vim.keymap.set('n', '<leader>fp', ':Telescope projects<CR>')
 
 -- Terminal
 vim.keymap.set('n', '<leader>t', ':ToggleTerm<CR>')
@@ -75,9 +74,6 @@ vim.keymap.set('n', '<leader>g', '<cmd>lua LAZYGIT_TOGGLE()<CR>')
 -- vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { noremap = true, silent = true })        -- Go to next error
 -- vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { noremap = true, silent = true })        -- Go to previous error
 -- vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, { noremap = true, silent = true }) -- Show all error in opened file
-
--- Search box
-vim.keymap.set('n', '<leader>s', ':SearchBoxIncSearch<CR>')
 
 -- Treesitter Context
 vim.keymap.set("n", "[c", function()
