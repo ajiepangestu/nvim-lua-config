@@ -65,7 +65,7 @@ return require('packer').startup(function(use)
     use 'terrortylor/nvim-comment'
 
     -- COC
-    use {'neoclide/coc.nvim', branch = 'release'}
+    use { 'neoclide/coc.nvim', branch = 'release' }
 
     -- Package Manager
     -- use 'williamboman/mason.nvim'
