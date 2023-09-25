@@ -32,9 +32,11 @@ lualine.setup {
                 }
             }
         },
-        lualine_x = { 'filename' },
+        lualine_x = {
+            'os.date("%I:%M:%S %p")'
+        },
         lualine_y = {
-            'progress'
+            'progress',
         },
         lualine_z = {
             'filetype',
