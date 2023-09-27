@@ -35,3 +35,4 @@ null_ls.setup({
     debug = true,
     update_in_insert = true
 })
+

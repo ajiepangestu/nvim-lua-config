@@ -102,4 +102,3 @@ vim.diagnostic.config({
         source = 'always',
     },
 })
-

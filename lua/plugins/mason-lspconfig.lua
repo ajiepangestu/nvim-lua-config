@@ -23,3 +23,4 @@ mason_lspconfig.setup {
         'emmet_ls',     -- emmet
     }
 }
+

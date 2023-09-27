@@ -77,6 +77,5 @@ vim.keymap.set('n', '<leader>g', '<cmd>lua LAZYGIT_TOGGLE()<CR>')
 
 -- Treesitter Context
 vim.keymap.set("n", "[c", function()
-  require("treesitter-context").go_to_context()
+    require("treesitter-context").go_to_context()
 end, { silent = true })
-

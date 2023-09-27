@@ -18,3 +18,4 @@ mason_null_ls.setup {
         'codespell', -- linter
     }
 }
+
