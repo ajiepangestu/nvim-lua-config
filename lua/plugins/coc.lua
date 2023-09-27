@@ -15,7 +15,9 @@ vim.g.coc_global_extensions = {
     'coc-pyright',
     'coc-lua',
     'coc-clangd',
-    'coc-spell-checker'
+    'coc-spell-checker',
+    'coc-snippets',
+    '@yaegassy/coc-tailwindcss3'
 }
 
 -- COC code navigation
