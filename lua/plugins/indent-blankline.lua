@@ -27,31 +27,8 @@ hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
 end)
 
 indent_blankline.setup {
-    show_current_context = true,
-    show_current_context_start = true,
     indent = { 
         highlight = highlight
     }, 
-    filetype_exclude = {
-        'lspinfo',
-        'packer',
-        'checkhealth',
-        'help',
-        'man',
-        'dashboard',
-        'git',
-        'markdown',
-        'text',
-        'terminal',
-        'TelescopePrompt',
-        'TelescopeResult',
-        'lazy'
-    },
-    buftype_exclude = {
-        'terminal',
-        'nofile',
-        'quickfix',
-        'prompt',
-    },
 }
 
