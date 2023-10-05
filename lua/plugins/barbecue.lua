@@ -6,6 +6,6 @@ end
 
 barbecue.setup {
     symbols = {
-        separator = ''
+        separator = ''
     }
 }
