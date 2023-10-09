@@ -7,6 +7,8 @@ vim.g.coc_global_extensions = {
     'coc-css',
     'coc-html',
     'coc-tsserver',
+    'coc-eslint',
+    'coc-react-refactor',
     'coc-emmet',
     'coc-docker',
     'coc-sql',
