@@ -109,14 +109,8 @@ return require('packer').startup(function(use)
         }
     }
 
-    -- Search and replace
-    use 's1n7ax/nvim-search-and-replace'
-
     -- Editory Config
     use 'gpanders/editorconfig.nvim'
-
-    -- Scrollbar
-    use 'petertriho/nvim-scrollbar'
 
     -- UI Library
     use 'MunifTanjim/nui.nvim'

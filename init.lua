@@ -28,8 +28,6 @@ require('plugins/indent-blankline')        -- Indent line
 require('plugins/nvim-autopairs')          -- Auto close tag
 require('plugins/nvim-colorizer')          -- Display color code
 require('plugins/nvim-comment')            -- Comment code
-require('plugins/nvim-scrollbar')          -- Scrollbar
-require('plugins/nvim-search-and-replace') -- Global search and replace
 require('plugins/telescope')               -- File Finder
 require('plugins/toggleterm')              -- Floating Terminal
 require('plugins/vim-multi-cursor')        -- Multi select
