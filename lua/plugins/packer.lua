@@ -97,7 +97,7 @@ return require('packer').startup(function(use)
 
     -- Barbecue
     use {
-        "utilyre/barbecue.nvim",
+        'utilyre/barbecue.nvim',
         requires = {
             "SmiteshP/nvim-navic"
         }
