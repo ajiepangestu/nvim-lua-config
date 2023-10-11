@@ -112,6 +112,9 @@ return require('packer').startup(function(use)
     -- Editory Config
     use 'gpanders/editorconfig.nvim'
 
+    -- Bufferline
+    use { 'akinsho/bufferline.nvim', tag = "*" }
+
     -- UI Library
     use 'MunifTanjim/nui.nvim'
 

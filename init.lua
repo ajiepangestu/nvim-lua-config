@@ -23,13 +23,14 @@ require('plugins/coc') -- COC
 -- -------------------------------------------------------------------
 
 -- Additional Plugins ------------------------------------------------
-require('plugins/gitsigns')                -- Git commit
-require('plugins/indent-blankline')        -- Indent line
-require('plugins/nvim-autopairs')          -- Auto close tag
-require('plugins/nvim-colorizer')          -- Display color code
-require('plugins/nvim-comment')            -- Comment code
-require('plugins/telescope')               -- File Finder
-require('plugins/toggleterm')              -- Floating Terminal
-require('plugins/vim-multi-cursor')        -- Multi select
-require('plugins/barbecue')                -- Outline context
+require('plugins/gitsigns')         -- Git commit
+require('plugins/bufferline')       -- Bufferline
+require('plugins/indent-blankline') -- Indent line
+require('plugins/nvim-autopairs')   -- Auto close tag
+require('plugins/nvim-colorizer')   -- Display color code
+require('plugins/nvim-comment')     -- Comment code
+require('plugins/telescope')        -- File Finder
+require('plugins/toggleterm')       -- Floating Terminal
+require('plugins/vim-multi-cursor') -- Multi select
+require('plugins/barbecue')         -- Outline context
 -- -------------------------------------------------------------------
