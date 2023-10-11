@@ -23,7 +23,6 @@ require('plugins/coc') -- COC
 
 -- Additional Plugins ------------------------------------------------
 require('plugins/gitsigns')         -- Git commit
-require('plugins/bufferline')       -- Bufferline
 require('plugins/nvim-autopairs')   -- Auto close tag
 require('plugins/nvim-colorizer')   -- Display color code
 require('plugins/nvim-comment')     -- Comment code

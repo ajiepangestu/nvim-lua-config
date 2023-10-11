@@ -110,7 +110,7 @@ return require('packer').startup(function(use)
     use { 'akinsho/bufferline.nvim', tag = "*" }
 
     -- UI Library
-    use 'MunifTanjim/nui.nvim'
+    -- use 'MunifTanjim/nui.nvim'
 
     -- Packer  Bootstrap
     if packer_bootstrap then

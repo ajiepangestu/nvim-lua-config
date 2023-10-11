@@ -28,7 +28,6 @@ vim.keymap.set('n', '<leader>l', '<C-w>l')
 
 -- Save
 vim.keymap.set('n', '<leader>w', ':w<CR>')
-vim.keymap.set('i', '<leader>w', '<C-c>:w<CR>')
 
 -- Close NeoVIM
 vim.keymap.set('n', '<leader>q', ':qa!<CR>')
@@ -41,7 +40,7 @@ vim.keymap.set('n', '<leader>q', ':qa!<CR>')
 vim.keymap.set('n', '<C-e>', ':NvimTreeToggle<CR>')
 vim.keymap.set('n', '<leader>e', ':NvimTreeFocus<CR>')
 
--- Bufferline
+-- Buffer / Tab
 vim.keymap.set('n', '<leader>p', ':bp<CR>') -- Goto previous tab
 vim.keymap.set('n', '<leader>n', ':bn<CR>') -- Goto next tab
 vim.keymap.set('n', '<leader>d', ':bd<CR>') -- Close tab
@@ -49,7 +48,6 @@ vim.keymap.set('n', '<leader>d', ':bd<CR>') -- Close tab
 -- File Finder
 vim.keymap.set('n', '<leader>ff', ':Telescope find_files hidden=true<CR>')
 vim.keymap.set('n', '<leader>fg', ':Telescope live_grep<CR>')
-vim.keymap.set('n', '<leader>fb', ':Telescope file_browser<CR>')
 
 -- Terminal
 vim.keymap.set('n', '<leader>t', ':ToggleTerm<CR>')
@@ -75,7 +73,3 @@ vim.keymap.set('n', '<leader>g', '<cmd>lua LAZYGIT_TOGGLE()<CR>')
 -- vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { noremap = true, silent = true })        -- Go to previous error
 -- vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, { noremap = true, silent = true }) -- Show all error in opened file
 
--- Treesitter Context
-vim.keymap.set("n", "[c", function()
-    require("treesitter-context").go_to_context()
-end, { silent = true })
