@@ -9,7 +9,6 @@ require('plugins/packer')                  -- Plugin Manager
 require('plugins/lualine')                 -- Statusbar
 require('plugins/nvim-tree')               -- File Manager
 require('plugins/nvim-treesitter')         -- Syntax Highlighting
-require('plugins/nvim-treesitter-context') -- Current Context Identifier
 -- -------------------------------------------------------------------
 
 -- Dev Plugins -------------------------------------------------------
@@ -25,7 +24,6 @@ require('plugins/coc') -- COC
 -- Additional Plugins ------------------------------------------------
 require('plugins/gitsigns')         -- Git commit
 require('plugins/bufferline')       -- Bufferline
-require('plugins/indent-blankline') -- Indent line
 require('plugins/nvim-autopairs')   -- Auto close tag
 require('plugins/nvim-colorizer')   -- Display color code
 require('plugins/nvim-comment')     -- Comment code

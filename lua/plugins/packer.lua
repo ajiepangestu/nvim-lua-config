@@ -30,9 +30,6 @@ return require('packer').startup(function(use)
     -- Icons
     use 'nvim-tree/nvim-web-devicons'
 
-    -- Indent line
-    use 'lukas-reineke/indent-blankline.nvim'
-
     -- Autopair
     use 'windwp/nvim-autopairs'
 
@@ -44,9 +41,6 @@ return require('packer').startup(function(use)
 
     -- Treesitter (Syntax Highlighting)
     use 'nvim-treesitter/nvim-treesitter'
-
-    -- Show Current Context
-    use 'nvim-treesitter/nvim-treesitter-context'
 
     -- Colorizer
     use 'norcalli/nvim-colorizer.lua'
