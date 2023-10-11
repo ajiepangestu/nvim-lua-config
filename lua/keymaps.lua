@@ -14,7 +14,7 @@ vim.keymap.set('', '<right>', '<nop>')
 vim.keymap.set('i', 'jj', '<Esc>')
 
 -- Clear search highlighting
-vim.keymap.set('n', '<leader>c', ':nohl<CR>')
+vim.keymap.set('n', '<leader>c', ':nohl<CR>', { silent = true })
 
 -- Split horizontal
 vim.keymap.set('n', '<leader>[', '<C-w>v')
@@ -38,7 +38,7 @@ vim.keymap.set('n', '<leader>q', ':qa!<CR>')
 -------------------------------------------------------------------
 -- Nvim Tree
 vim.keymap.set('n', '<C-e>', ':NvimTreeToggle<CR>')
-vim.keymap.set('n', '<leader>e', ':NvimTreeFocus<CR>')
+vim.keymap.set('n', '<leader>e', ':NvimTreeFocus<CR>', { silent = true })
 
 -- Buffer / Tab
 vim.keymap.set('n', '<leader>p', ':bp<CR>') -- Goto previous tab
@@ -72,4 +72,3 @@ vim.keymap.set('n', '<leader>g', '<cmd>lua LAZYGIT_TOGGLE()<CR>')
 -- vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { noremap = true, silent = true })        -- Go to next error
 -- vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { noremap = true, silent = true })        -- Go to previous error
 -- vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, { noremap = true, silent = true }) -- Show all error in opened file
-

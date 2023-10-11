@@ -5,10 +5,10 @@ require('colors')  -- Theme
 -- -------------------------------------------------------------------
 
 -- Base Plugins ------------------------------------------------------
-require('plugins/packer')                  -- Plugin Manager
-require('plugins/lualine')                 -- Statusbar
-require('plugins/nvim-tree')               -- File Manager
-require('plugins/nvim-treesitter')         -- Syntax Highlighting
+require('plugins/packer')          -- Plugin Manager
+require('plugins/lualine')         -- Statusbar
+require('plugins/nvim-tree')       -- File Manager
+require('plugins/nvim-treesitter') -- Syntax Highlighting
 -- -------------------------------------------------------------------
 
 -- Dev Plugins -------------------------------------------------------
@@ -23,6 +23,7 @@ require('plugins/coc') -- COC
 
 -- Additional Plugins ------------------------------------------------
 require('plugins/gitsigns')         -- Git commit
+require('plugins/better-comment')   -- Better comment
 require('plugins/nvim-autopairs')   -- Auto close tag
 require('plugins/nvim-colorizer')   -- Display color code
 require('plugins/nvim-comment')     -- Comment code

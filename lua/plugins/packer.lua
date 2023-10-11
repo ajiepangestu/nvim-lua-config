@@ -109,8 +109,8 @@ return require('packer').startup(function(use)
     -- Bufferline
     use { 'akinsho/bufferline.nvim', tag = "*" }
 
-    -- UI Library
-    -- use 'MunifTanjim/nui.nvim'
+    -- Better comment
+    use 'Djancyp/better-comments.nvim'
 
     -- Packer  Bootstrap
     if packer_bootstrap then

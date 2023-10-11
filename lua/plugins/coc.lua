@@ -9,6 +9,8 @@ vim.g.coc_global_extensions = {
     'coc-tsserver',
     'coc-eslint',
     'coc-prettier',
+    'coc-sh',
+    'coc-yaml',
     'coc-react-refactor',
     'coc-emmet',
     'coc-docker',
@@ -20,7 +22,9 @@ vim.g.coc_global_extensions = {
     'coc-clangd',
     'coc-spell-checker',
     'coc-snippets',
-    '@yaegassy/coc-tailwindcss3'
+    '@yaegassy/coc-tailwindcss3',
+    '@yaegassy/coc-volar',
+    'coc-htmldjango',
 }
 
 -- COC code navigation
