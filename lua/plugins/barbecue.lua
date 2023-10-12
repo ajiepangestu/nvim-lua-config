@@ -4,8 +4,4 @@ if not status_ok then
     return
 end
 
-barbecue.setup {
-    symbols = {
-        separator = ''
-    }
-}
+barbecue.setup {}
