@@ -109,6 +109,9 @@ return require('packer').startup(function(use)
     -- Bufferline
     use { 'akinsho/bufferline.nvim', tag = "*" }
 
+    -- Indent Blank Line
+    use 'lukas-reineke/indent-blankline.nvim'
+
     -- Better comment
     use 'Djancyp/better-comments.nvim'
 
