@@ -6,13 +6,15 @@ end
 
 bufferline.setup {
     options = {
-        separator_style = "slant",
+        separator_style = 'thin',
+        diagnostic = "coc",
         offsets = {
             {
                 filetype = "NvimTree",
                 text = "File Explorer",
+                text_align = 'center',
                 highlight = "Directory",
-                separator = true
+                separator = false
             }
         }
 
