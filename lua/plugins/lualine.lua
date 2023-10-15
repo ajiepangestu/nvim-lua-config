@@ -11,7 +11,15 @@ lualine.setup {
         },
         lualine_b = {
             'branch',
-            'diff',
+            {
+                'diff',
+                colored = true,
+                symbols = {
+                    added = ' ',
+                    removed = ' ',
+                    modified = '󰤌 '
+                }
+            }
         },
         lualine_c = {
             {
