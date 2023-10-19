@@ -106,9 +106,6 @@ return require('packer').startup(function(use)
     -- Editory Config
     use 'gpanders/editorconfig.nvim'
 
-    -- Bufferline
-    use { 'akinsho/bufferline.nvim', tag = "*" }
-
     -- Indent Blank Line
     use 'lukas-reineke/indent-blankline.nvim'
 

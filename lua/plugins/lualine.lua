@@ -5,6 +5,16 @@ if not status_ok then
 end
 
 lualine.setup {
+    options = {
+        component_separators = {
+            left = '',
+            right = ''
+        },
+        section_separators = {
+            left = '',
+            right = ''
+        },
+    },
     sections = {
         lualine_a = {
             'mode',
@@ -33,9 +43,7 @@ lualine.setup {
         lualine_x = {
             'os.date("%I:%M:%S %p")'
         },
-        lualine_y = {
-            'progress',
-        },
+        lualine_y = {},
         lualine_z = {
             'filetype',
         }
@@ -44,7 +52,7 @@ lualine.setup {
         lualine_a = {},
         lualine_b = {},
         lualine_c = { 'filename' },
-        lualine_x = { 'location' },
+        lualine_x = {},
         lualine_y = {},
         lualine_z = {}
     },
