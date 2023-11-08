@@ -17,7 +17,12 @@ lualine.setup {
     },
     sections = {
         lualine_a = {
-            'mode',
+            {
+                'mode',
+                separator = {
+                    left = ' '
+                }
+            }
         },
         lualine_b = {
             'branch',
@@ -41,11 +46,17 @@ lualine.setup {
             }
         },
         lualine_x = {
-            'os.date("%I:%M:%S %p")'
+            'os.date("%I:%M:%S %p")',
         },
         lualine_y = {},
         lualine_z = {
-            'filetype',
+            {
+                'filetype',
+                separator = {
+                    right = ' ',
+                    left = ' '
+                }
+            }
         }
     },
     inactive_sections = {
