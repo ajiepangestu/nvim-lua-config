@@ -32,4 +32,5 @@ require('plugins/telescope')        -- File Finder
 require('plugins/toggleterm')       -- Floating Terminal
 require('plugins/vim-multi-cursor') -- Multi select
 require('plugins/barbecue')         -- Outline context
+require('plugins/mini')             -- Animations
 -- -------------------------------------------------------------------

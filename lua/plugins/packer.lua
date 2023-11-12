@@ -52,7 +52,7 @@ return require('packer').startup(function(use)
     use 'nvim-lua/plenary.nvim'
 
     -- Telescope (Finder)
-    use { 'nvim-telescope/telescope.nvim', tag = '0.1.0' }
+    use { 'nvim-telescope/telescope.nvim', tag = '0.1.4' }
     use { 'nvim-telescope/telescope-file-browser.nvim' }
 
     -- Comment
@@ -111,6 +111,9 @@ return require('packer').startup(function(use)
 
     -- Better comment
     use 'Djancyp/better-comments.nvim'
+
+    -- Animations
+    use { 'echasnovski/mini.nvim', branch = 'stable' }
 
     -- Packer  Bootstrap
     if packer_bootstrap then
