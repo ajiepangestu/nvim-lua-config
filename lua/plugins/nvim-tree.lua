@@ -26,7 +26,7 @@ nvim_tree.setup {
         enable = true
     },
     view = {
-        adaptive_size = true
+        adaptive_size = false
     }
 }
 

@@ -43,7 +43,7 @@ return require('packer').startup(function(use)
     use 'nvim-treesitter/nvim-treesitter'
 
     -- Treesitter Context
-    use 'nvim-treesitter/nvim-treesitter-context'
+    -- use 'nvim-treesitter/nvim-treesitter-context'
 
     -- Colorizer
     use 'norcalli/nvim-colorizer.lua'
@@ -117,6 +117,9 @@ return require('packer').startup(function(use)
 
     -- Animations
     use { 'echasnovski/mini.nvim', branch = 'stable' }
+
+    -- Outline
+    use 'simrat39/symbols-outline.nvim'
 
     -- Packer  Bootstrap
     if packer_bootstrap then

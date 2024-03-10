@@ -33,4 +33,5 @@ require('plugins/toggleterm')       -- Floating Terminal
 require('plugins/vim-multi-cursor') -- Multi select
 require('plugins/barbecue')         -- Outline context
 require('plugins/mini')             -- Animations
+require('plugins/symbols-outline')  -- Outline
 -- -------------------------------------------------------------------
