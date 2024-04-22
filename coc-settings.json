@@ -35,5 +35,6 @@
         ".git",
         "*.dll",
         "**/*.dll"
-    ]
+    ],
+    "snippets.ultisnips.pythonPrompt": false
 }
