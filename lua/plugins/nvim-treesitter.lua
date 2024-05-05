@@ -27,7 +27,8 @@ require('nvim-treesitter.configs').setup {
         'c_sharp',
         'cpp',
         'c',
-        'gitignore'
+        'gitignore',
+        'vimdoc'
     },
     sync_install = false,
     highlight = {
