@@ -65,13 +65,13 @@ return require('packer').startup(function(use)
     use { 'neoclide/coc.nvim', branch = 'release' }
 
     -- Package Manager
-    -- use 'williamboman/mason.nvim'
+    use 'williamboman/mason.nvim'
 
     -- LSP Package Manager
-    -- use 'williamboman/mason-lspconfig.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
 
     -- LSP config
-    -- use 'neovim/nvim-lspconfig'
+    use 'neovim/nvim-lspconfig'
 
     -- Formatter and Linter Package Manager
     -- use 'jayp0521/mason-null-ls.nvim'
@@ -80,17 +80,17 @@ return require('packer').startup(function(use)
     -- use 'jose-elias-alvarez/null-ls.nvim'
 
     -- Auto Complete
-    -- use {
-    --     'hrsh7th/nvim-cmp',
-    --     requires = {
-    --         'hrsh7th/cmp-nvim-lsp',
-    --         'hrsh7th/cmp-buffer',
-    --         'hrsh7th/cmp-path',
-    --         'hrsh7th/cmp-cmdline',
-    --         'hrsh7th/cmp-vsnip',
-    --         'hrsh7th/vim-vsnip'
-    --     }
-    -- }
+    use {
+        'hrsh7th/nvim-cmp',
+        requires = {
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-cmdline',
+            'hrsh7th/cmp-vsnip',
+            'hrsh7th/vim-vsnip'
+        }
+    }
 
     -- Git Commit Label
     use { 'lewis6991/gitsigns.nvim', branch = 'release' }

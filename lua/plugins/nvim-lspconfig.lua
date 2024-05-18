@@ -59,7 +59,7 @@ lspconfig['pyright'].setup {
         python = {
             analysis = {
                 autoSearchPaths = true,
-                diagnosticMode = "workspace",
+                diagnosticMode = "openFileOnly",
                 useLibraryCodeForTypes = true
             }
         }
