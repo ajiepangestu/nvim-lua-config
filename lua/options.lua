@@ -27,6 +27,7 @@ opt.lazyredraw = true                     -- Faster scrolling
 opt.undodir = '~/.nvim/data/backup'       -- Undo directory
 opt.encoding = 'UTF-8'                    -- Encoding
 opt.shortmess:append 'sI'                 -- Disable NeoVIM Intro
+opt.linespace = 10
 
 if fn.has('wsl') ~= 0 then
     g.clipboard = {
