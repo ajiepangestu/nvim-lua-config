@@ -37,7 +37,7 @@ return require('packer').startup(function(use)
     use { 'mg979/vim-visual-multi', branch = 'master' }
 
     -- Autotag
-    use "windwp/nvim-ts-autotag"
+    -- use "windwp/nvim-ts-autotag"
 
     -- Treesitter (Syntax Highlighting)
     use 'nvim-treesitter/nvim-treesitter'
