@@ -1,4 +1,4 @@
-# NeoVIM Lua Configuration
+# 💤 LazyVim
 
-a Personal NeoVIM Configuration written in Lua
-
+A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
+Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
